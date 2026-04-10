@@ -306,10 +306,6 @@ function buildAnalyzerReport({ domain, companyName, industry, scope, content }) 
 
 export default function AISyndicateWebsite() {
   const siteUrl = "https://aisyndicate.com";
-  const siteTitle =
-    "AI Syndicate | Generative Engine Optimization (GEO) Agency for AI Search Visibility";
-  const siteDescription =
-    "AI Syndicate helps premium brands win SEO and GEO by becoming the answer inside ChatGPT, Google AI Overviews, Perplexity, and other AI search experiences.";
 
   const services = [
     {
@@ -535,78 +531,12 @@ export default function AISyndicateWebsite() {
   }, [normalizedDomain, toolCompanyName, toolIndustry, toolScope, toolContent]);
 
   useEffect(() => {
-    document.title = siteTitle;
-
-    const upsertMeta = (name, content, attribute = "name") => {
-      let tag = document.head.querySelector(`meta[${attribute}="${name}"]`);
-      if (!tag) {
-        tag = document.createElement("meta");
-        tag.setAttribute(attribute, name);
-        document.head.appendChild(tag);
-      }
-      tag.setAttribute("content", content);
-    };
-
-    const upsertLink = (rel, href) => {
-      let tag = document.head.querySelector(`link[rel="${rel}"]`);
-      if (!tag) {
-        tag = document.createElement("link");
-        tag.setAttribute("rel", rel);
-        document.head.appendChild(tag);
-      }
-      tag.setAttribute("href", href);
-    };
-
-    upsertMeta("description", siteDescription);
-    upsertMeta("robots", "index, follow, max-image-preview:large");
-    upsertMeta("og:title", siteTitle, "property");
-    upsertMeta("og:description", siteDescription, "property");
-    upsertMeta("og:type", "website", "property");
-    upsertMeta("og:url", siteUrl, "property");
-    upsertMeta("twitter:card", "summary_large_image");
-    upsertMeta("twitter:title", siteTitle);
-    upsertMeta("twitter:description", siteDescription);
-    upsertLink("canonical", siteUrl);
-
     const existingSchema = document.getElementById("ai-syndicate-schema");
     if (existingSchema) existingSchema.remove();
 
     const schema = {
       "@context": "https://schema.org",
       "@graph": [
-        {
-          "@type": "Organization",
-          "@id": `${siteUrl}/#organization`,
-          name: "AI Syndicate",
-          url: siteUrl,
-          email: "hello@aisyndicate.com",
-          description: siteDescription,
-          areaServed: ["United States"],
-          knowsAbout: [
-            "Generative Engine Optimization",
-            "AI Search Optimization",
-            "SEO",
-            "ChatGPT visibility",
-            "Google AI Overviews",
-            "Perplexity visibility",
-          ],
-        },
-        {
-          "@type": "Service",
-          "@id": `${siteUrl}/#service`,
-          serviceType: "Generative Engine Optimization",
-          name: "AI Search Visibility and GEO Services",
-          provider: {
-            "@id": `${siteUrl}/#organization`,
-          },
-          areaServed: "United States",
-          audience: {
-            "@type": "Audience",
-            audienceType: "High-ticket service businesses",
-          },
-          description:
-            "AI Syndicate helps premium brands improve SEO, GEO, answer-engine visibility, and conversion performance.",
-        },
         {
           "@type": "FAQPage",
           "@id": `${siteUrl}/#faq`,
@@ -632,7 +562,7 @@ export default function AISyndicateWebsite() {
       const tag = document.getElementById("ai-syndicate-schema");
       if (tag) tag.remove();
     };
-  }, [faqs, siteDescription, siteTitle, siteUrl]);
+  }, [faqs, siteUrl]);
 
   async function fetchWebsiteContent() {
     try {

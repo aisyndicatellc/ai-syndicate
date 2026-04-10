@@ -1,0 +1,29 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#050816"/>
+  <circle cx="176" cy="112" r="220" fill="#0891B2" fill-opacity="0.18"/>
+  <circle cx="1088" cy="90" r="240" fill="#C026D3" fill-opacity="0.16"/>
+  <circle cx="758" cy="540" r="240" fill="#4F46E5" fill-opacity="0.2"/>
+  <rect x="48" y="48" width="1104" height="534" rx="36" fill="url(#paint0_linear)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <text x="96" y="156" fill="#67E8F9" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="8">AI SYNDICATE</text>
+  <text x="96" y="266" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700">
+    <tspan x="96" dy="0">SEO and GEO for brands that</tspan>
+    <tspan x="96" dy="82">want to win AI answers.</tspan>
+  </text>
+  <text x="96" y="430" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="400">
+    Premium visibility strategy for ChatGPT, Google AI Overviews,
+  </text>
+  <text x="96" y="472" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="400">
+    Perplexity, and high-intent search.
+  </text>
+  <rect x="96" y="508" width="350" height="54" rx="27" fill="#0F172A" stroke="#22D3EE" stroke-opacity="0.45"/>
+  <text x="126" y="543" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">
+    aisyndicate.com
+  </text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="64" y1="44" x2="1060" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1124"/>
+      <stop offset="0.55" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1E1B4B"/>
+    </linearGradient>
+  </defs>
+</svg>
