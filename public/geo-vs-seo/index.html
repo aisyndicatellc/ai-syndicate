@@ -34,6 +34,38 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "Organization",
+            "@id": "https://www.aisyndicate.com/#organization",
+            "name": "AI Syndicate",
+            "url": "https://www.aisyndicate.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.aisyndicate.com/favicon.png?v=4"
+            },
+            "email": "cj@aisyndicate.com",
+            "description": "AI Syndicate helps premium service brands improve SEO, win GEO, and earn visibility in AI answers and search.",
+            "areaServed": "United States",
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "contactType": "sales",
+                "email": "cj@aisyndicate.com",
+                "url": "https://www.aisyndicate.com/#contact",
+                "availableLanguage": "English",
+                "areaServed": "United States"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.aisyndicate.com/#website",
+            "url": "https://www.aisyndicate.com",
+            "name": "AI Syndicate",
+            "publisher": {
+              "@id": "https://www.aisyndicate.com/#organization"
+            }
+          },
+          {
             "@type": "WebPage",
             "@id": "https://www.aisyndicate.com/geo-vs-seo/#webpage",
             "url": "https://www.aisyndicate.com/geo-vs-seo/",
@@ -41,6 +73,18 @@
             "isPartOf": {
               "@id": "https://www.aisyndicate.com/#website"
             }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://www.aisyndicate.com/geo-vs-seo/#service",
+            "name": "GEO vs SEO Strategy",
+            "serviceType": "SEO and GEO Strategy",
+            "provider": {
+              "@id": "https://www.aisyndicate.com/#organization"
+            },
+            "areaServed": "United States",
+            "url": "https://www.aisyndicate.com/geo-vs-seo/",
+            "description": "Strategy for brands that need traditional SEO and answer-engine visibility to reinforce each other."
           },
           {
             "@type": "BreadcrumbList",
@@ -200,6 +244,74 @@
               <li>Logos or case studies that cannot be verified.</li>
               <li>Traffic claims detached from revenue quality.</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div class="eyebrow">Founder Expertise</div>
+          <h2>Founder-led strategy that connects ranking logic with recommendation logic.</h2>
+          <p>
+            The work sits between classic SEO execution and modern answer-engine positioning, so brands are not forced to choose one at the expense of the other.
+          </p>
+        </div>
+        <div class="card-grid">
+          <div class="content-card">
+            <h3>Search fundamentals</h3>
+            <p>Technical SEO, internal links, page targeting, and crawl architecture that help pages compete for attention.</p>
+          </div>
+          <div class="content-card">
+            <h3>Recommendation strength</h3>
+            <p>Entity clarity, proof language, comparison framing, and service structure that help AI systems describe the brand more confidently.</p>
+          </div>
+          <div class="content-card">
+            <h3>Commercial alignment</h3>
+            <p>Strategy built around demand capture, better leads, and stronger perceived fit instead of ranking optics alone.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div class="eyebrow">Case Studies</div>
+          <h2>Public examples of SEO and GEO working together on the live site.</h2>
+          <p>
+            We use the public build as a visible example of what happens when service pages, comparison pages, industry pages, and technical structure are designed to reinforce one another.
+          </p>
+        </div>
+        <div class="card-grid">
+          <div class="content-card">
+            <h3>Homepage to service architecture</h3>
+            <p>The site now connects the homepage to dedicated service and industry pages, which creates more crawl depth and clearer commercial pathways.</p>
+          </div>
+          <div class="content-card">
+            <h3>Comparison page as demand capture</h3>
+            <p>This page itself gives search engines and buyers a clearer way to understand how SEO and GEO differ and where they overlap.</p>
+          </div>
+          <div class="content-card">
+            <h3>Technical alignment underneath</h3>
+            <p>Schema, canonical tags, sitemap coverage, and internal links support the content model instead of operating separately from it.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div class="eyebrow">Testimonials &amp; References</div>
+          <h2>We keep this trust layer disciplined.</h2>
+          <p>
+            Named testimonials are published when approved. Until then, the stronger signal is a site that can explain its strategy clearly and defend the work in public.
+          </p>
+        </div>
+        <div class="columns-2">
+          <div class="content-card">
+            <h3>Attributed testimonials only</h3>
+            <p>We do not use anonymous praise as a substitute for real, credited trust signals.</p>
+          </div>
+          <div class="content-card">
+            <h3>References available privately</h3>
+            <p>For serious fit conversations, references can be shared directly instead of turned into generic website filler.</p>
           </div>
         </div>
       </section>
