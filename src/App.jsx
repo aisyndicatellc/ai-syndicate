@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const STOPWORDS = new Set([
   "the",
@@ -305,29 +305,35 @@ function buildAnalyzerReport({ domain, companyName, industry, scope, content }) 
 }
 
 export default function AISyndicateWebsite() {
+  const siteUrl = "https://aisyndicate.com";
+  const siteTitle =
+    "AI Syndicate | Generative Engine Optimization (GEO) Agency for AI Search Visibility";
+  const siteDescription =
+    "AI Syndicate helps premium brands win SEO and GEO by becoming the answer inside ChatGPT, Google AI Overviews, Perplexity, and other AI search experiences.";
+
   const services = [
     {
-      title: "Generative Engine Optimization",
+      title: "Generative Engine Optimization (GEO)",
       description:
-        "We design your digital presence so AI platforms are more likely to cite, summarize, and recommend your company when buyers ask high-intent questions.",
-      bullets: ["Citation strategy", "Entity positioning", "Answer-engine visibility"],
+        "We design your digital presence so AI platforms are more likely to cite, summarize, and recommend your company when buyers ask high-intent questions in ChatGPT, Perplexity, and Google AI search experiences.",
+      bullets: ["Citation strategy", "Entity positioning", "AI answer visibility"],
     },
     {
       title: "AI Visibility Audits",
       description:
-        "We show exactly where your competitors are being surfaced, where your authority breaks down, and where the fastest visibility gains exist.",
-      bullets: ["Market mapping", "Competitor intelligence", "Visibility gaps"],
+        "We show where competitors are being surfaced across AI answers and traditional search, where your authority breaks down, and where the fastest visibility gains exist.",
+      bullets: ["Market mapping", "Competitor intelligence", "SERP + answer-engine gaps"],
     },
     {
       title: "Authority Content Systems",
       description:
-        "We create high-trust service pages, comparison pages, and proof assets built to earn trust from both humans and answer engines.",
+        "We create service pages, comparison pages, and proof assets built to earn trust from both humans and answer engines while strengthening classic SEO coverage.",
       bullets: ["Service architecture", "Comparison pages", "Proof layers"],
     },
     {
       title: "Conversion-Focused GEO",
       description:
-        "We turn AI visibility into premium outcomes by structuring your site and offer so discovery becomes booked calls and revenue.",
+        "We turn AI visibility into pipeline by structuring your site and offer so discovery becomes booked calls, qualified leads, and premium revenue.",
       bullets: ["Offer strategy", "Lead flow", "Higher-value inquiries"],
     },
   ];
@@ -364,6 +370,34 @@ export default function AISyndicateWebsite() {
     },
   ];
 
+  const geoPillars = [
+    {
+      title: "Topical Coverage",
+      text: "We build the service, comparison, location, and FAQ coverage needed to answer the exact questions buyers ask before they buy.",
+    },
+    {
+      title: "Entity Clarity",
+      text: "We make it obvious who you are, what you do, where you operate, and why your brand deserves to be cited.",
+    },
+    {
+      title: "Proof Signals",
+      text: "We strengthen testimonials, outcomes, experience, trust markers, and conversion cues so humans and AI systems see real authority.",
+    },
+    {
+      title: "Commercial Intent",
+      text: "We target the queries closest to revenue, not just traffic, so visibility compounds into better opportunities.",
+    },
+  ];
+
+  const queryThemes = [
+    "best GEO agency for law firms",
+    "generative engine optimization agency",
+    "how to rank in ChatGPT and AI Overviews",
+    "AI search optimization for service businesses",
+    "GEO vs SEO for high-ticket brands",
+    "how to get cited by Perplexity and ChatGPT",
+  ];
+
   const proofCards = [
     {
       label: "Intent Coverage",
@@ -382,24 +416,31 @@ export default function AISyndicateWebsite() {
     },
   ];
 
-  const faqs = [
-    {
-      q: "What makes this different from SEO?",
-      a: "Traditional SEO chased rankings. AI GEO focuses on becoming the source answer engines summarize and recommend when buyers ask high-intent questions.",
-    },
-    {
-      q: "Is the on-site analyzer real?",
-      a: "Yes. It evaluates actual pasted website copy for authority, trust, content depth, conversion readiness, and answer-engine-friendly positioning.",
-    },
-    {
-      q: "Who is this built for?",
-      a: "AI Syndicate is best suited for high-trust, high-ticket service businesses where perception and authority materially affect revenue.",
-    },
-    {
-      q: "What do most clients buy first?",
-      a: "Most engagements begin with an AI visibility audit and then expand into authority content, comparison pages, landing pages, and ongoing growth systems.",
-    },
-  ];
+  const faqs = useMemo(
+    () => [
+      {
+        q: "What is generative engine optimization (GEO)?",
+        a: "Generative engine optimization is the practice of making your brand easier for AI systems to understand, cite, summarize, and recommend when buyers ask commercial questions in tools like ChatGPT, Google AI Overviews, Perplexity, and Gemini.",
+      },
+      {
+        q: "What makes this different from SEO?",
+        a: "SEO helps you earn visibility in search results. GEO helps you become the source that AI answer engines summarize and recommend. The strongest strategy does both together, so rankings, citations, authority, and conversions reinforce each other.",
+      },
+      {
+        q: "Is the on-site analyzer real?",
+        a: "Yes. It evaluates actual pasted website copy for authority, trust, content depth, conversion readiness, and answer-engine-friendly positioning.",
+      },
+      {
+        q: "Who is this built for?",
+        a: "AI Syndicate is best suited for high-trust, high-ticket service businesses where perception and authority materially affect revenue.",
+      },
+      {
+        q: "What do most clients buy first?",
+        a: "Most engagements begin with an AI visibility audit and then expand into authority content, comparison pages, landing pages, and ongoing growth systems.",
+      },
+    ],
+    []
+  );
 
   const testimonials = [
     {
@@ -435,7 +476,7 @@ export default function AISyndicateWebsite() {
 
   const trustStats = [
     { label: "Discovery Layers", value: "3" },
-    { label: "Visibility Angles", value: "Local / State / National" },
+    { label: "Visibility Angles", value: "SEO / GEO / Conversion" },
     { label: "Core Focus", value: "Trust + Authority" },
   ];
 
@@ -472,6 +513,106 @@ export default function AISyndicateWebsite() {
       content: toolContent,
     });
   }, [normalizedDomain, toolCompanyName, toolIndustry, toolScope, toolContent]);
+
+  useEffect(() => {
+    document.title = siteTitle;
+
+    const upsertMeta = (name, content, attribute = "name") => {
+      let tag = document.head.querySelector(`meta[${attribute}="${name}"]`);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute(attribute, name);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", content);
+    };
+
+    const upsertLink = (rel, href) => {
+      let tag = document.head.querySelector(`link[rel="${rel}"]`);
+      if (!tag) {
+        tag = document.createElement("link");
+        tag.setAttribute("rel", rel);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("href", href);
+    };
+
+    upsertMeta("description", siteDescription);
+    upsertMeta("robots", "index, follow, max-image-preview:large");
+    upsertMeta("og:title", siteTitle, "property");
+    upsertMeta("og:description", siteDescription, "property");
+    upsertMeta("og:type", "website", "property");
+    upsertMeta("og:url", siteUrl, "property");
+    upsertMeta("twitter:card", "summary_large_image");
+    upsertMeta("twitter:title", siteTitle);
+    upsertMeta("twitter:description", siteDescription);
+    upsertLink("canonical", siteUrl);
+
+    const existingSchema = document.getElementById("ai-syndicate-schema");
+    if (existingSchema) existingSchema.remove();
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": `${siteUrl}/#organization`,
+          name: "AI Syndicate",
+          url: siteUrl,
+          email: "hello@aisyndicate.com",
+          description: siteDescription,
+          areaServed: ["United States"],
+          knowsAbout: [
+            "Generative Engine Optimization",
+            "AI Search Optimization",
+            "SEO",
+            "ChatGPT visibility",
+            "Google AI Overviews",
+            "Perplexity visibility",
+          ],
+        },
+        {
+          "@type": "Service",
+          "@id": `${siteUrl}/#service`,
+          serviceType: "Generative Engine Optimization",
+          name: "AI Search Visibility and GEO Services",
+          provider: {
+            "@id": `${siteUrl}/#organization`,
+          },
+          areaServed: "United States",
+          audience: {
+            "@type": "Audience",
+            audienceType: "High-ticket service businesses",
+          },
+          description:
+            "AI Syndicate helps premium brands improve SEO, GEO, answer-engine visibility, and conversion performance.",
+        },
+        {
+          "@type": "FAQPage",
+          "@id": `${siteUrl}/#faq`,
+          mainEntity: faqs.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.a,
+            },
+          })),
+        },
+      ],
+    };
+
+    const schemaTag = document.createElement("script");
+    schemaTag.id = "ai-syndicate-schema";
+    schemaTag.type = "application/ld+json";
+    schemaTag.textContent = JSON.stringify(schema);
+    document.head.appendChild(schemaTag);
+
+    return () => {
+      const tag = document.getElementById("ai-syndicate-schema");
+      if (tag) tag.remove();
+    };
+  }, [faqs, siteDescription, siteTitle, siteUrl]);
 
   async function fetchWebsiteContent() {
     try {
@@ -552,24 +693,31 @@ export default function AISyndicateWebsite() {
           <a href="#top" className="text-sm font-semibold uppercase tracking-[0.28em] text-white/90">
             AI Syndicate
           </a>
-          
+
+          <div className="hidden items-center gap-6 text-sm text-white/70 md:flex">
+            <a href="#services" className="transition hover:text-white">Services</a>
+            <a href="#tool" className="transition hover:text-white">Analyzer</a>
+            <a href="#faq" className="transition hover:text-white">FAQ</a>
+          </div>
+
           <GlowButton href="#contact">Book a Call</GlowButton>
         </div>
       </div>
 
+      <main>
       <section id="top" className="relative overflow-hidden border-b border-white/10 pt-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(34,211,238,0.16),transparent_24%),radial-gradient(circle_at_82%_12%,rgba(217,70,239,0.22),transparent_22%),radial-gradient(circle_at_60%_50%,rgba(124,58,237,0.18),transparent_28%),linear-gradient(to_bottom,rgba(255,255,255,0.03),rgba(255,255,255,0))]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-8 lg:px-10 lg:pb-28 lg:pt-16">
           <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_.95fr]">
             <div>
               <div className="mb-6 inline-flex items-center rounded-full border border-cyan-300/15 bg-white/[0.06] px-4 py-2 text-sm text-cyan-100/90 backdrop-blur">
-                AI GEO • DISCOVERY • POSITIONING • REVENUE
+                SEO + GEO • AI SEARCH VISIBILITY • DISCOVERY • REVENUE
               </div>
               <h1 className="max-w-5xl text-5xl font-semibold tracking-[-0.04em] sm:text-6xl lg:text-7xl xl:text-[5.15rem] xl:leading-[0.98]">
-                The premium firm for brands that want to win inside <span className="bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300 bg-clip-text text-transparent">AI answers</span>.
+                The GEO agency for brands that want to win inside <span className="bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300 bg-clip-text text-transparent">AI answers</span> and search.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
-                AI Syndicate helps elite service businesses dominate answer-engine discovery, look like the obvious choice before the first call, and convert visibility into premium revenue.
+                AI Syndicate helps elite service businesses improve SEO, dominate answer-engine discovery, earn more AI citations, and turn that visibility into qualified pipeline and premium revenue.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <GlowButton href="#contact">Book a Discovery Call</GlowButton>
@@ -606,7 +754,7 @@ export default function AISyndicateWebsite() {
 
                 <div className="space-y-4 p-5">
                   <div className="max-w-[82%] rounded-[1.5rem] rounded-tl-md border border-white/10 bg-white/[0.06] px-4 py-3 text-sm leading-7 text-white/80 shadow-lg shadow-black/20">
-                    Analyze why our brand is not showing up in AI answers for high-intent searches in Miami.
+                    Analyze why our brand is not showing up in ChatGPT, Google AI Overviews, and Perplexity for high-intent searches in Miami.
                   </div>
 
                   <div className="ml-auto max-w-[92%] rounded-[1.5rem] rounded-tr-md border border-cyan-300/10 bg-gradient-to-br from-cyan-400/10 via-violet-500/10 to-fuchsia-500/10 px-4 py-4 shadow-lg shadow-black/20">
@@ -757,9 +905,9 @@ export default function AISyndicateWebsite() {
       <section id="services" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.3em] text-fuchsia-300">What We Do</p>
-          <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">A category-defining growth system for answer-engine visibility.</h2>
+          <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">A category-defining growth system for SEO, GEO, and answer-engine visibility.</h2>
           <p className="mt-5 text-lg leading-8 text-white/65">
-            This is not generic SEO. It is a premium visibility engine built for brands that need trust, authority, and high-value conversions.
+            This is not generic SEO. It is a premium visibility engine built for brands that need stronger rankings, stronger citations, stronger authority, and higher-value conversions.
           </p>
         </div>
 
@@ -790,13 +938,43 @@ export default function AISyndicateWebsite() {
         </div>
       </section>
 
+      <section className="border-y border-white/10 bg-white/[0.03]">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+          <div className="max-w-3xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Why We Rank</p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+              What the best GEO agencies actually do differently.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-white/65">
+              The brands most likely to win AI search visibility are the ones with clearer entities, deeper topical coverage, stronger proof, and cleaner commercial intent. That is the system we build.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {geoPillars.map((item, index) => (
+              <div
+                key={item.title}
+                className={`rounded-[2rem] border border-white/10 p-7 shadow-lg shadow-black/20 ${
+                  index % 2 === 0
+                    ? "bg-gradient-to-br from-cyan-400/10 to-white/[0.03]"
+                    : "bg-gradient-to-br from-violet-500/10 to-white/[0.03]"
+                }`}
+              >
+                <h3 className="text-2xl font-semibold">{item.title}</h3>
+                <p className="mt-4 text-base leading-7 text-white/65">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="tool" className="border-y border-white/10 bg-white/[0.03]">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Interactive Tool</p>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">A real analyzer, not a fake demo.</h2>
             <p className="mt-5 text-lg leading-8 text-white/65">
-              Paste real website copy and instantly evaluate authority, trust, conversion readiness, market signals, and answer-engine positioning.
+              Paste real website copy and instantly evaluate authority, trust, conversion readiness, market signals, SEO coverage, and answer-engine positioning.
             </p>
           </div>
 
@@ -1000,6 +1178,28 @@ export default function AISyndicateWebsite() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+        <div className="max-w-3xl">
+          <p className="text-sm uppercase tracking-[0.3em] text-fuchsia-300">High-Intent Queries</p>
+          <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+            The exact GEO and AI search questions we help brands win.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-white/65">
+            Great GEO pages do not hide from explicit search language. They answer commercial, comparison, and category-defining questions directly so search engines and answer engines have clean language to summarize.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {queryThemes.map((query) => (
+            <div
+              key={query}
+              className="rounded-[1.6rem] border border-white/10 bg-white/[0.05] p-5 text-white/80 shadow-lg shadow-black/20"
+            >
+              {query}
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="process" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.3em] text-fuchsia-300">How It Works</p>
@@ -1134,6 +1334,7 @@ export default function AISyndicateWebsite() {
           </div>
         </div>
       </section>
+      </main>
     </div>
   );
 }
