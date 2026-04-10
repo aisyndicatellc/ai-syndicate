@@ -1404,6 +1404,28 @@ export default function AISyndicateWebsite() {
             </div>
           </div>
         </section>
+
+        <footer className="mx-auto max-w-7xl px-6 pb-16 lg:px-10">
+          <div className="grid gap-6 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-sm text-white/55">
+            <div>
+              AI Syndicate • <a className="text-white/75 hover:text-white" href="/generative-engine-optimization/">GEO Agency</a> • <a className="text-white/75 hover:text-white" href="/ai-visibility-audit/">AI Visibility Audit</a> • <a className="text-white/75 hover:text-white" href="/geo-vs-seo/">GEO vs SEO</a>
+            </div>
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">Industry Pages</p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {industries.map((industry) => (
+                  <a
+                    key={industry.title}
+                    href={industry.href}
+                    className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-white/72 transition hover:border-cyan-300/25 hover:text-white"
+                  >
+                    {industry.title}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </footer>
       </main>
     </div>
   );
