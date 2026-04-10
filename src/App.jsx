@@ -687,7 +687,7 @@ export default function AISyndicateWebsite() {
                 </div>
                 <div className="text-left">
                   <div className="text-xs uppercase tracking-[0.34em] text-cyan-200/70">
-                    AI Syndicate
+                    AI Search Visibility
                   </div>
                   <div className="mt-2 text-3xl font-semibold tracking-[0.08em] text-white sm:text-4xl">
                     AI SYNDICATE
