@@ -210,6 +210,12 @@ function buildAnalyzerReport({ domain, companyName, industry, scope, content }) 
       "trade publications",
       "operator resources",
     ],
+    "Real Estate": [
+      "local brokerages",
+      "listing platforms",
+      "developer sites",
+      "market publications",
+    ],
     "Home Services": [
       "local competitors",
       "review sites",
@@ -339,12 +345,11 @@ export default function AISyndicateWebsite() {
   ];
 
   const industries = [
-    "Law Firms",
-    "Private Equity",
-    "Healthcare & Med Spas",
-    "Oil & Gas Services",
-    "Luxury Home Services",
-    "High-Ticket B2B",
+    { title: "Law Firms", href: "/geo-for-law-firms/" },
+    { title: "Private Equity", href: "/geo-for-private-equity/" },
+    { title: "Med Spas", href: "/geo-for-med-spas/" },
+    { title: "Oil & Gas Services", href: "/geo-for-oil-and-gas-services/" },
+    { title: "Real Estate", href: "/geo-for-real-estate/" },
   ];
 
   const process = [
@@ -489,7 +494,7 @@ export default function AISyndicateWebsite() {
     "Private Equity",
     "Med Spas",
     "Oil & Gas Services",
-    "Luxury Service Brands",
+    "Real Estate",
   ];
 
   const trustStats = [
@@ -503,6 +508,7 @@ export default function AISyndicateWebsite() {
     "Med Spa",
     "Private Equity",
     "Oil & Gas Services",
+    "Real Estate",
     "Home Services",
     "B2B Services",
   ];
@@ -512,7 +518,7 @@ export default function AISyndicateWebsite() {
   const [toolIndustry, setToolIndustry] = useState("B2B Services");
   const [toolScope, setToolScope] = useState("Miami");
   const [toolContent, setToolContent] = useState(
-    "AI Syndicate helps premium brands win visibility in ChatGPT, Google AI Overviews, and Perplexity. We offer AI visibility audits, discovery strategy, authority content systems, and conversion-focused GEO for law firms, med spas, private equity firms, oil and gas services, and premium B2B brands. Book a discovery call to learn how to build trust, authority, and more qualified inbound leads."
+    "AI Syndicate helps premium brands win visibility in ChatGPT, Google AI Overviews, and Perplexity. We offer AI visibility audits, discovery strategy, authority content systems, and conversion-focused GEO for law firms, med spas, private equity firms, oil and gas services, real estate brands, and premium B2B operators. Book a discovery call to learn how to build trust, authority, and more qualified inbound leads."
   );
   const [isFetchingSite, setIsFetchingSite] = useState(false);
   const [fetchError, setFetchError] = useState("");
@@ -1276,9 +1282,16 @@ export default function AISyndicateWebsite() {
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {industries.map((industry) => (
-            <div key={industry} className="rounded-[1.6rem] border border-white/10 bg-white/[0.05] p-5 text-white/80 shadow-lg shadow-black/20">
-              {industry}
-            </div>
+            <a
+              key={industry.title}
+              href={industry.href}
+              className="rounded-[1.6rem] border border-white/10 bg-white/[0.05] p-5 text-white/80 shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-cyan-300/25 hover:bg-white/[0.07]"
+            >
+              <div className="text-lg font-medium text-white">{industry.title}</div>
+              <div className="mt-3 text-sm uppercase tracking-[0.24em] text-cyan-200/70">
+                Explore page
+              </div>
+            </a>
           ))}
         </div>
       </section>
