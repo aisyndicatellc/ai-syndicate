@@ -266,7 +266,7 @@ function buildAnalyzerReport({ domain, companyName, industry, scope, content }) 
     );
   } else {
     gaps.push(
-      `Your copy does not strongly reinforce ${scope} or local/state/national discovery layers.`
+      `Your copy does not strongly reinforce ${scope} or the supporting market-discovery layers around it.`
     );
   }
 
@@ -287,7 +287,7 @@ function buildAnalyzerReport({ domain, companyName, industry, scope, content }) 
   }
 
   nextMoves.push(
-    `Build dedicated pages for local, state, and national ${industry.toLowerCase()} discovery.`
+    `Build dedicated pages for local, regional, and category-level ${industry.toLowerCase()} discovery.`
   );
   nextMoves.push(
     "Create comparison pages and answer-style service pages designed for AI summarization."
@@ -361,7 +361,7 @@ export default function AISyndicateWebsite() {
     {
       step: "02",
       title: "Competitive Mapping",
-      text: "We map the brands, directories, publishers, and competitors currently controlling local, state, and national answer-engine visibility.",
+      text: "We map the brands, publishers, competitors, and citation patterns currently controlling recommendation visibility in your market.",
     },
     {
       step: "03",
@@ -405,9 +405,9 @@ export default function AISyndicateWebsite() {
 
   const proofCards = [
     {
-      label: "Commercial Coverage",
-      value: "Local → State → National",
-      text: "We build visibility across every layer of commercial search intent so your brand shows up when buyers are closest to action.",
+      label: "Decision Architecture",
+      value: "Service → Comparison → Proof",
+      text: "We structure the pages buyers and answer engines need in order to understand the offer, compare you against alternatives, and trust the decision.",
     },
     {
       label: "Market Positioning",
@@ -731,11 +731,12 @@ export default function AISyndicateWebsite() {
 
           <div className="hidden items-center gap-6 text-sm text-white/70 md:flex">
             <a href="#services" className="transition hover:text-white">Services</a>
-            <a href="#tool" className="transition hover:text-white">Analyzer</a>
+            <a href="#industries" className="transition hover:text-white">Industries</a>
+            <a href="#tool" className="transition hover:text-white">Website Analyzer</a>
             <a href="#faq" className="transition hover:text-white">FAQ</a>
           </div>
 
-          <GlowButton href="#contact">Contact Us</GlowButton>
+          <GlowButton href="/ai-visibility-audit/">Start with the Audit</GlowButton>
         </div>
       </div>
 
@@ -781,14 +782,14 @@ export default function AISyndicateWebsite() {
                 ))}
               </div>
               <div className="mt-10 flex flex-wrap gap-4">
-                <GlowButton href="#contact">Book a Discovery Call</GlowButton>
+                <GlowButton href="/ai-visibility-audit/">Start with the Audit</GlowButton>
                 <GlowButton href="#tool" variant="secondary">Run the Analyzer</GlowButton>
               </div>
               <div className="mt-12 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-3">
                 {[
-                  ["Local", "Own city-level discovery"],
-                  ["State", "Dominate regional trust"],
-                  ["National", "Become the category answer"],
+                  ["Clarify", "Make the offer easy to understand"],
+                  ["Compare", "Own the questions buyers ask before they choose"],
+                  ["Prove", "Back authority with trust signals that convert"],
                 ].map(([title, text]) => (
                   <div key={title} className="border-l border-cyan-300/20 pl-4">
                     <div className="text-xl font-semibold text-white">{title}</div>
@@ -831,9 +832,9 @@ export default function AISyndicateWebsite() {
 
                   <div className="grid gap-4 md:grid-cols-3">
                     {[
-                      "Category pages create recommendation confidence",
-                      "Comparison content creates commercial intent capture",
-                      "Proof language increases authority and conversion together",
+                      "Service pages make your offer easier to summarize",
+                      "Comparison pages capture high-intent demand",
+                      "Proof systems reinforce authority and conversion",
                     ].map((item) => (
                       <div key={item} className="rounded-2xl border border-white/10 bg-[#0b1124]/60 p-4 text-sm leading-7 text-white/70">
                         {item}
@@ -1345,7 +1346,7 @@ export default function AISyndicateWebsite() {
               {[
                 "AI query and intent mapping",
                 "Competitor citation analysis",
-                "Local, state, and national visibility review",
+                "Service, comparison, and authority gap review",
                 "Homepage and service page gaps",
                 "Authority signal recommendations",
                 "Clear next-step roadmap",
@@ -1359,7 +1360,7 @@ export default function AISyndicateWebsite() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+      <section id="industries" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.3em] text-fuchsia-300">Who This Is For</p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -1554,15 +1555,30 @@ export default function AISyndicateWebsite() {
         </section>
 
         <footer className="mx-auto max-w-7xl px-6 pb-16 lg:px-10">
-          <div className="grid gap-6 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-sm text-white/55">
+          <div className="grid gap-8 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-sm text-white/55 lg:grid-cols-[1.1fr_.75fr_1fr] lg:p-10">
             <div>
-              AI Syndicate • <a className="text-white/75 hover:text-white" href="/generative-engine-optimization/">GEO Agency</a> • <a className="text-white/75 hover:text-white" href="/ai-visibility-audit/">AI Visibility Audit</a> • <a className="text-white/75 hover:text-white" href="/geo-vs-seo/">GEO vs SEO</a>
+              <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">AI Syndicate</p>
+              <h3 className="mt-4 max-w-xl text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                Premium SEO, GEO, and AI visibility strategy for brands that need to look like the obvious choice.
+              </h3>
+              <p className="mt-4 max-w-lg text-base leading-7 text-white/62">
+                Founder-led strategy for premium service brands that need stronger discoverability, sharper positioning, and better demand capture from search and AI answers.
+              </p>
+              <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-white/62">
+                <span>United States</span>
+                <a className="text-white/78 hover:text-white" href="https://www.aisyndicate.com">www.aisyndicate.com</a>
+                <a className="text-white/78 hover:text-white" href="mailto:cj@aisyndicate.com">cj@aisyndicate.com</a>
+              </div>
             </div>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/62">
-              <span>United States</span>
-              <a className="text-white/78 hover:text-white" href="https://www.aisyndicate.com">www.aisyndicate.com</a>
-              <a className="text-white/78 hover:text-white" href="mailto:cj@aisyndicate.com">cj@aisyndicate.com</a>
-              <span>Founder-led SEO, GEO, and AI visibility strategy</span>
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">Core Pages</p>
+              <div className="mt-4 grid gap-3 text-sm text-white/68">
+                <a className="transition hover:text-white" href="/">Home</a>
+                <a className="transition hover:text-white" href="/generative-engine-optimization/">GEO Agency</a>
+                <a className="transition hover:text-white" href="/ai-visibility-audit/">AI Visibility Audit</a>
+                <a className="transition hover:text-white" href="/geo-vs-seo/">GEO vs SEO</a>
+                <a className="transition hover:text-white" href="#tool">Website Analyzer</a>
+              </div>
             </div>
             <div>
               <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">Industry Pages</p>
