@@ -725,7 +725,7 @@ export default function AISyndicateWebsite() {
       </div>
 
       <main>
-      <section id="top" className="relative overflow-hidden border-b border-white/10 pt-28">
+        <section id="top" className="relative overflow-hidden border-b border-white/10 pt-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(34,211,238,0.16),transparent_24%),radial-gradient(circle_at_82%_12%,rgba(217,70,239,0.22),transparent_22%),radial-gradient(circle_at_60%_50%,rgba(124,58,237,0.18),transparent_28%),linear-gradient(to_bottom,rgba(255,255,255,0.03),rgba(255,255,255,0))]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-8 lg:px-10 lg:pb-28 lg:pt-16">
           <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_.95fr]">
@@ -1402,41 +1402,49 @@ export default function AISyndicateWebsite() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 pb-24 pt-6 text-center lg:px-10" id="contact">
-        <div className="relative overflow-hidden rounded-[2.2rem] border border-white/10 bg-gradient-to-br from-white/[0.11] via-violet-500/[0.08] to-cyan-400/[0.08] p-10 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:p-14">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(217,70,239,0.18),transparent_32%)]" />
-          <div className="relative">
-            <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Let’s Build Your AI Moat</p>
-            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-              Ready to see why your competitors are being recommended first?
-            </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/70">
-              If your competitors are already being cited and you are not, demand is already being shaped without you. Start with the audit, see the gaps, and build the authority layer that wins better clients.
-            </p>
-            <div className="mx-auto mt-8 max-w-3xl rounded-[1.8rem] border border-white/10 bg-[#0b1124]/55 p-6 text-left">
-              <div className="text-xs uppercase tracking-[0.28em] text-white/40">What Happens Next</div>
-              <div className="mt-4 grid gap-4 md:grid-cols-3">
-                {[
-                  "We review your market, offer, and current visibility",
-                  "We identify the authority and citation gaps holding you back",
-                  "We show you the fastest path to better SEO, GEO, and conversion performance",
-                ].map((item) => (
-                  <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-sm leading-7 text-white/75">
-                    {item}
-                  </div>
-                ))}
+        <section className="mx-auto max-w-5xl px-6 pb-24 pt-6 text-center lg:px-10" id="contact">
+          <div className="relative overflow-hidden rounded-[2.2rem] border border-white/10 bg-gradient-to-br from-white/[0.11] via-violet-500/[0.08] to-cyan-400/[0.08] p-10 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:p-14">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.18),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(217,70,239,0.18),transparent_32%)]" />
+            <div className="relative">
+              <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Let’s Build Your AI Moat</p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+                Ready to see why your competitors are being recommended first?
+              </h2>
+              <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/70">
+                If your competitors are already being cited and you are not, demand is already being shaped without you. Start with the audit, see the gaps, and build the authority layer that wins better clients.
+              </p>
+              <div className="mx-auto mt-8 max-w-3xl rounded-[1.8rem] border border-white/10 bg-[#0b1124]/55 p-6 text-left">
+                <div className="text-xs uppercase tracking-[0.28em] text-white/40">What Happens Next</div>
+                <div className="mt-4 grid gap-4 md:grid-cols-3">
+                  {[
+                    "We review your market, offer, and current visibility",
+                    "We identify the authority and citation gaps holding you back",
+                    "We show you the fastest path to better SEO, GEO, and conversion performance",
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-sm leading-7 text-white/75"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+                <GlowButton href="mailto:cj@aisyndicate.com?subject=AI%20Syndicate%20Inquiry">
+                  Contact Us
+                </GlowButton>
+                <GlowButton href="#tool" variant="secondary">
+                  Run the Analyzer First
+                </GlowButton>
+              </div>
+              <p className="mt-4 text-sm text-white/55">Prefer email? Reach us at cj@aisyndicate.com.</p>
+              <p className="mt-3 text-sm text-white/45">
+                For founders, operators, and premium service brands that want better demand capture from search and AI answers.
+              </p>
             </div>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <GlowButton href="mailto:cj@aisyndicate.com?subject=AI%20Syndicate%20Inquiry">Contact Us</GlowButton>
-              <GlowButton href="mailto:cj@aisyndicate.com?subject=AI%20Syndicate%20Discovery%20Call" variant="secondary">Email CJ Directly</GlowButton>
-            </div>
-            <p className="mt-5 text-sm text-white/45">
-              For founders, operators, and premium service brands that want better demand capture from search and AI answers.
-            </p>
           </div>
-        </div>
-      </section>
+        </section>
       </main>
     </div>
   );
