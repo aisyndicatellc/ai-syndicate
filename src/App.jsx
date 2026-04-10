@@ -412,13 +412,6 @@ export default function AISyndicateWebsite() {
     },
   ];
 
-  const credibilityPoints = [
-    "Built for high-trust, high-ticket service businesses",
-    "Designed around search intent, buyer psychology, and AI citations",
-    "Combines SEO structure, GEO clarity, and conversion strategy",
-    "Focused on premium perception, not commodity traffic",
-  ];
-
   const engagementFit = [
     "You sell a high-trust service where authority changes close rates",
     "Your buyers compare options and ask AI before they book calls",
@@ -638,10 +631,10 @@ export default function AISyndicateWebsite() {
         <div className="absolute bottom-[-10rem] left-1/3 h-[26rem] w-[26rem] rounded-full bg-violet-500/10 blur-3xl" />
       </div>
 
-      <div className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#050816]/70 backdrop-blur-2xl">
+      <div className="fixed inset-x-0 top-0 z-50 border-b border-white/8 bg-[#050816]/78 backdrop-blur-2xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
           <a href="#top" className="flex items-center gap-3 text-white/90 transition hover:text-white">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-300/15 bg-white/[0.04] shadow-[0_12px_36px_rgba(0,0,0,0.22)] backdrop-blur">
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03]">
               <img
                 src="/favicon.svg?v=4"
                 alt="AI Syndicate mark"
@@ -664,21 +657,21 @@ export default function AISyndicateWebsite() {
             <a href="#faq" className="transition hover:text-white">FAQ</a>
           </div>
 
-          <GlowButton href="#contact">Book a Call</GlowButton>
+          <GlowButton href="#contact">Contact Us</GlowButton>
         </div>
       </div>
 
       <main>
         <section id="top" className="relative overflow-hidden border-b border-white/10 pt-28">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(34,211,238,0.16),transparent_24%),radial-gradient(circle_at_82%_12%,rgba(217,70,239,0.22),transparent_22%),radial-gradient(circle_at_60%_50%,rgba(124,58,237,0.18),transparent_28%),linear-gradient(to_bottom,rgba(255,255,255,0.03),rgba(255,255,255,0))]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(34,211,238,0.14),transparent_24%),radial-gradient(circle_at_82%_12%,rgba(217,70,239,0.14),transparent_22%),linear-gradient(to_bottom,rgba(255,255,255,0.02),rgba(255,255,255,0))]" />
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-8 lg:px-10 lg:pb-28 lg:pt-16">
-          <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_.95fr]">
+          <div className="grid items-start gap-16 lg:grid-cols-[1.12fr_.88fr]">
             <div>
-              <div className="mb-8 inline-flex items-center rounded-full border border-cyan-300/15 bg-white/[0.06] px-4 py-2 text-sm text-cyan-100/90 backdrop-blur">
+              <div className="mb-8 inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-cyan-100/90">
                 SEO + GEO • AI SEARCH VISIBILITY • PREMIUM POSITIONING
               </div>
-              <div className="mb-8 inline-flex items-center gap-5 rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] px-5 py-4 shadow-[0_24px_70px_rgba(0,0,0,0.22)] backdrop-blur-xl">
-                <div className="flex h-18 w-18 items-center justify-center rounded-[1.4rem] border border-cyan-300/15 bg-white/[0.05]">
+              <div className="mb-8 flex items-center gap-5">
+                <div className="flex h-18 w-18 items-center justify-center rounded-[1.4rem] border border-white/10 bg-white/[0.04]">
                   <img
                     src="/favicon.svg?v=4"
                     alt="AI Syndicate mark"
@@ -694,30 +687,32 @@ export default function AISyndicateWebsite() {
                   </div>
                 </div>
               </div>
-              <h1 className="max-w-5xl text-5xl font-semibold tracking-[-0.04em] sm:text-6xl lg:text-7xl xl:text-[5.15rem] xl:leading-[0.98]">
+              <h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.05em] sm:text-6xl lg:text-7xl xl:leading-[0.98]">
                 The GEO agency for brands that need to look like the <span className="bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300 bg-clip-text text-transparent">obvious answer</span>.
               </h1>
-              <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
+              <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70 sm:text-[1.15rem]">
                 AI Syndicate helps premium service brands improve SEO, dominate answer-engine discovery, and convert AI visibility into qualified pipeline, stronger authority, and higher-value revenue.
               </p>
-              <div className="mt-6 flex flex-wrap gap-2 text-sm text-white/60">
-                {credibilityPoints.map((item) => (
-                  <span key={item} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2">
-                    {item}
-                  </span>
+              <div className="mt-8 flex flex-wrap gap-6 text-sm text-white/55">
+                {[
+                  "Built for high-trust service brands",
+                  "Focused on authority, not vanity traffic",
+                  "Designed for search and AI answers",
+                ].map((item) => (
+                  <span key={item}>{item}</span>
                 ))}
               </div>
               <div className="mt-10 flex flex-wrap gap-4">
                 <GlowButton href="#contact">Book a Discovery Call</GlowButton>
                 <GlowButton href="#tool" variant="secondary">Run the Analyzer</GlowButton>
               </div>
-              <div className="mt-10 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="mt-12 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-3">
                 {[
                   ["Local", "Own city-level discovery"],
                   ["State", "Dominate regional trust"],
                   ["National", "Become the category answer"],
                 ].map(([title, text]) => (
-                  <div key={title} className="rounded-3xl border border-white/10 bg-white/[0.04] p-5 shadow-[0_18px_40px_rgba(0,0,0,0.22)] backdrop-blur">
+                  <div key={title} className="border-l border-cyan-300/20 pl-4">
                     <div className="text-xl font-semibold text-white">{title}</div>
                     <div className="mt-1 text-sm text-white/60">{text}</div>
                   </div>
@@ -726,43 +721,21 @@ export default function AISyndicateWebsite() {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-fuchsia-500/20 via-violet-500/10 to-cyan-400/20 blur-2xl" />
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#0a1020]/85 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
-                <div className="border-b border-white/10 bg-white/[0.04] px-5 py-4">
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.24em] text-white/40">AI Syndicate Assistant</p>
-                      <h3 className="mt-1 text-lg font-semibold text-white">Search visibility strategist</h3>
-                    </div>
-                    <div className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">
-                      Live Demo
-                    </div>
-                  </div>
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,36,0.94),rgba(7,12,25,0.92))] shadow-[0_30px_80px_rgba(0,0,0,0.38)]">
+                <div className="border-b border-white/10 px-6 py-5">
+                  <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">Market Intelligence Snapshot</p>
+                  <h3 className="mt-3 text-2xl font-semibold text-white">How AI systems decide who gets recommended.</h3>
+                  <p className="mt-3 max-w-lg text-sm leading-7 text-white/58">
+                    The brands that win AI visibility usually have clearer service architecture, stronger trust signals, and pages that are easier to summarize than their competitors.
+                  </p>
                 </div>
 
-                <div className="space-y-4 p-5">
-                  <div className="max-w-[82%] rounded-[1.5rem] rounded-tl-md border border-white/10 bg-white/[0.06] px-4 py-3 text-sm leading-7 text-white/80 shadow-lg shadow-black/20">
-                    Analyze why our brand is not showing up in ChatGPT, Google AI Overviews, and Perplexity for high-intent searches in Miami.
-                  </div>
-
-                  <div className="ml-auto max-w-[92%] rounded-[1.5rem] rounded-tr-md border border-cyan-300/10 bg-gradient-to-br from-cyan-400/10 via-violet-500/10 to-fuchsia-500/10 px-4 py-4 shadow-lg shadow-black/20">
-                    <div className="flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-cyan-200/70">
-                      <span className="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.9)]" />
-                      AI response
-                    </div>
-                    <div className="mt-3 space-y-3 text-sm leading-7 text-white/80">
-                      <p>
-                        Your competitors are likely winning answer-engine visibility because they have stronger trust signals, clearer category positioning, and more citation-friendly pages.
-                      </p>
-                      <div className="rounded-2xl border border-white/10 bg-[#0b1124]/70 p-3">
-                        <div className="text-xs uppercase tracking-[0.22em] text-white/40">Top findings</div>
-                        <ul className="mt-2 space-y-2 text-white/75">
-                          <li>• Local intent queries are being captured by stronger regional brands</li>
-                          <li>• Your proof and authority need to be easier for AI systems to interpret</li>
-                          <li>• Comparison pages could unlock premium recommendation intent</li>
-                        </ul>
-                      </div>
-                    </div>
+                <div className="space-y-6 p-6">
+                  <div className="rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5">
+                    <div className="text-xs uppercase tracking-[0.24em] text-white/40">Core finding</div>
+                    <p className="mt-3 text-base leading-8 text-white/78">
+                      Most brands do not have a ranking problem first. They have a clarity problem. Search engines and answer engines cannot confidently interpret, compare, and recommend what is not structured clearly.
+                    </p>
                   </div>
 
                   <div className="grid gap-3 sm:grid-cols-3">
@@ -771,40 +744,40 @@ export default function AISyndicateWebsite() {
                       ["Authority", `${aiReport.authorityScore}%`],
                       ["Conversion", `${aiReport.conversionScore}%`],
                     ].map(([label, value]) => (
-                      <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.04] p-3">
+                      <div key={label} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                         <div className="text-[11px] uppercase tracking-[0.22em] text-white/40">{label}</div>
                         <div className="mt-2 text-2xl font-semibold text-white">{value}</div>
                       </div>
                     ))}
                   </div>
 
-                  <button
-                    onClick={() => document.getElementById("tool")?.scrollIntoView({ behavior: "smooth" })}
-                    className="w-full rounded-[1.4rem] border border-white/10 bg-[#07101f]/90 p-3 text-left transition hover:border-cyan-300/25"
-                  >
-                    <div className="flex items-center gap-3 rounded-[1.1rem] border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white/45">
-                      <span className="text-white/30">Ask AI Syndicate about your market, competitors, or GEO strategy...</span>
-                      <span className="ml-auto inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 via-violet-500 to-fuchsia-500 text-sm font-semibold text-white shadow-[0_0_20px_rgba(120,119,255,0.45)]">
-                        →
-                      </span>
-                    </div>
-                  </button>
+                  <div className="grid gap-4 md:grid-cols-3">
+                    {[
+                      "Category pages create recommendation confidence",
+                      "Comparison content creates commercial intent capture",
+                      "Proof language increases authority and conversion together",
+                    ].map((item) => (
+                      <div key={item} className="rounded-2xl border border-white/10 bg-[#0b1124]/60 p-4 text-sm leading-7 text-white/70">
+                        {item}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-14 rounded-[2.2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-4 shadow-[0_20px_60px_rgba(0,0,0,0.20)] backdrop-blur-xl">
+          <div className="mt-16 border-y border-white/8 py-6">
             <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-6">
               {logos.map((logo, index) => (
                 <div
                   key={logo}
-                  className={`rounded-2xl border px-4 py-3 text-center text-sm shadow-[0_8px_24px_rgba(0,0,0,0.18)] ${
+                  className={`px-4 py-3 text-center text-sm ${
                     index % 3 === 0
-                      ? "border-cyan-300/10 bg-cyan-400/5 text-cyan-100/70"
+                      ? "text-cyan-100/60"
                       : index % 3 === 1
-                      ? "border-violet-300/10 bg-violet-400/5 text-violet-100/70"
-                      : "border-fuchsia-300/10 bg-fuchsia-400/5 text-fuchsia-100/70"
+                      ? "text-violet-100/60"
+                      : "text-fuchsia-100/60"
                   }`}
                 >
                   {logo}
@@ -816,9 +789,7 @@ export default function AISyndicateWebsite() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10 lg:py-16">
-        <div className="relative overflow-hidden rounded-[2.4rem] border border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.10),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(217,70,239,0.12),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] p-6 shadow-[0_24px_70px_rgba(0,0,0,0.22)] backdrop-blur-xl sm:p-8 lg:p-10">
-          <div className="absolute -left-16 top-10 h-32 w-32 rounded-full bg-cyan-400/10 blur-3xl" />
-          <div className="absolute -right-10 bottom-0 h-40 w-40 rounded-full bg-fuchsia-500/10 blur-3xl" />
+        <div className="relative overflow-hidden rounded-[2.4rem] border border-white/10 bg-white/[0.035] p-6 shadow-[0_24px_70px_rgba(0,0,0,0.22)] sm:p-8 lg:p-10">
           <div className="relative grid gap-8 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/15 bg-white/[0.05] px-4 py-2 text-xs font-medium uppercase tracking-[0.28em] text-cyan-200/85">
@@ -849,16 +820,10 @@ export default function AISyndicateWebsite() {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
-              {trustStats.map((stat, index) => (
+              {trustStats.map((stat) => (
                 <div
                   key={stat.label}
-                  className={`rounded-[1.7rem] border border-white/10 p-5 shadow-lg shadow-black/20 ${
-                    index === 0
-                      ? "bg-gradient-to-br from-cyan-400/12 to-white/[0.03]"
-                      : index === 1
-                      ? "bg-gradient-to-br from-violet-500/12 to-white/[0.03]"
-                      : "bg-gradient-to-br from-fuchsia-500/12 to-white/[0.03]"
-                  }`}
+                  className="rounded-[1.7rem] border border-white/10 bg-[#0b1124]/55 p-5"
                 >
                   <div className="text-[11px] uppercase tracking-[0.24em] text-white/40">{stat.label}</div>
                   <div className="mt-3 text-xl font-semibold leading-7 text-white">{stat.value}</div>
@@ -869,10 +834,10 @@ export default function AISyndicateWebsite() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))]">
+      <section className="border-y border-white/10 bg-white/[0.02]">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
           <div className="grid gap-8 lg:grid-cols-[1.05fr_.95fr]">
-            <div className="rounded-[2.2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
+            <div className="rounded-[2.2rem] border border-white/10 bg-white/[0.03] p-8">
               <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Why Clients Hire Us</p>
               <h2 className="mt-4 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
                 Premium brands do not need more marketing noise. They need clearer authority.
@@ -882,7 +847,7 @@ export default function AISyndicateWebsite() {
               </p>
             </div>
 
-            <div className="rounded-[2.2rem] border border-white/10 bg-[#0b1124]/80 p-8 shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
+            <div className="rounded-[2.2rem] border border-white/10 bg-[#0b1124]/60 p-8">
               <div className="text-xs uppercase tracking-[0.28em] text-white/40">Best Fit</div>
               <div className="mt-6 grid gap-4">
                 {engagementFit.map((item) => (
@@ -898,16 +863,10 @@ export default function AISyndicateWebsite() {
 
       <section id="proof" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="grid gap-6 md:grid-cols-3">
-          {proofCards.map((card, index) => (
+          {proofCards.map((card) => (
             <div
               key={card.label}
-              className={`rounded-[2rem] border border-white/10 p-8 shadow-lg shadow-black/25 ${
-                index === 0
-                  ? "bg-gradient-to-br from-cyan-400/10 to-white/[0.03]"
-                  : index === 1
-                  ? "bg-gradient-to-br from-violet-500/10 to-white/[0.03]"
-                  : "bg-gradient-to-br from-fuchsia-500/10 to-white/[0.03]"
-              }`}
+              className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8"
             >
               <div className="text-xs uppercase tracking-[0.25em] text-white/40">{card.label}</div>
               <div className="mt-3 text-2xl font-semibold tracking-tight">{card.value}</div>
@@ -927,15 +886,8 @@ export default function AISyndicateWebsite() {
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className={`rounded-[2rem] border border-white/10 p-8 shadow-lg shadow-black/20 ${
-                index % 2 === 0
-                  ? "bg-gradient-to-br from-white/[0.06] to-cyan-400/[0.05]"
-                  : "bg-gradient-to-br from-white/[0.06] to-violet-500/[0.05]"
-              }`}
-            >
+          {services.map((service) => (
+            <div key={service.title} className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
               <h3 className="text-2xl font-semibold">{service.title}</h3>
               <p className="mt-4 text-base leading-7 text-white/65">{service.description}</p>
               <div className="mt-6 flex flex-wrap gap-2">
@@ -953,7 +905,7 @@ export default function AISyndicateWebsite() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.03]">
+      <section className="border-y border-white/10 bg-white/[0.02]">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Why We Rank</p>
@@ -966,14 +918,10 @@ export default function AISyndicateWebsite() {
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {geoPillars.map((item, index) => (
+            {geoPillars.map((item) => (
               <div
                 key={item.title}
-                className={`rounded-[2rem] border border-white/10 p-7 shadow-lg shadow-black/20 ${
-                  index % 2 === 0
-                    ? "bg-gradient-to-br from-cyan-400/10 to-white/[0.03]"
-                    : "bg-gradient-to-br from-violet-500/10 to-white/[0.03]"
-                }`}
+                className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-7"
               >
                 <h3 className="text-2xl font-semibold">{item.title}</h3>
                 <p className="mt-4 text-base leading-7 text-white/65">{item.text}</p>
