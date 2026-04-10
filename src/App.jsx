@@ -641,11 +641,13 @@ export default function AISyndicateWebsite() {
       <div className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#050816]/70 backdrop-blur-2xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
           <a href="#top" className="flex items-center gap-3 text-white/90 transition hover:text-white">
-            <img
-              src="/ai-syndicate-logo.png"
-              alt="AI Syndicate logo"
-              className="h-10 w-auto rounded-md bg-white/95 px-1.5 py-1 shadow-[0_8px_30px_rgba(0,0,0,0.22)]"
-            />
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-300/15 bg-white/[0.04] shadow-[0_12px_36px_rgba(0,0,0,0.22)] backdrop-blur">
+              <img
+                src="/favicon.svg?v=4"
+                alt="AI Syndicate mark"
+                className="h-7 w-7"
+              />
+            </div>
             <div className="hidden sm:block">
               <div className="text-[11px] font-medium uppercase tracking-[0.3em] text-cyan-200/70">
                 AI Search Visibility
@@ -675,12 +677,22 @@ export default function AISyndicateWebsite() {
               <div className="mb-8 inline-flex items-center rounded-full border border-cyan-300/15 bg-white/[0.06] px-4 py-2 text-sm text-cyan-100/90 backdrop-blur">
                 SEO + GEO • AI SEARCH VISIBILITY • PREMIUM POSITIONING
               </div>
-              <div className="mb-8 max-w-md rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.22)] backdrop-blur-xl">
-                <img
-                  src="/ai-syndicate-logo.png"
-                  alt="AI Syndicate"
-                  className="h-auto w-full"
-                />
+              <div className="mb-8 inline-flex items-center gap-5 rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] px-5 py-4 shadow-[0_24px_70px_rgba(0,0,0,0.22)] backdrop-blur-xl">
+                <div className="flex h-18 w-18 items-center justify-center rounded-[1.4rem] border border-cyan-300/15 bg-white/[0.05]">
+                  <img
+                    src="/favicon.svg?v=4"
+                    alt="AI Syndicate mark"
+                    className="h-11 w-11"
+                  />
+                </div>
+                <div className="text-left">
+                  <div className="text-xs uppercase tracking-[0.34em] text-cyan-200/70">
+                    AI Syndicate
+                  </div>
+                  <div className="mt-2 text-3xl font-semibold tracking-[0.08em] text-white sm:text-4xl">
+                    AI SYNDICATE
+                  </div>
+                </div>
               </div>
               <h1 className="max-w-5xl text-5xl font-semibold tracking-[-0.04em] sm:text-6xl lg:text-7xl xl:text-[5.15rem] xl:leading-[0.98]">
                 The GEO agency for brands that need to look like the <span className="bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300 bg-clip-text text-transparent">obvious answer</span>.
