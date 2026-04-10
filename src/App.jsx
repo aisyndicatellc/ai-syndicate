@@ -434,6 +434,69 @@ export default function AISyndicateWebsite() {
     "Search visibility should compound into revenue",
   ];
 
+  const founderExpertise = [
+    {
+      title: "Positioning and offer architecture",
+      text: "Founder-led work focused on sharpening category language, premium positioning, and the way the offer is understood before a call ever happens.",
+    },
+    {
+      title: "Technical SEO and schema execution",
+      text: "Hands-on implementation across canonical tags, sitemap logic, internal links, crawl structure, and schema instead of strategy that stops at a deck.",
+    },
+    {
+      title: "Answer-engine visibility systems",
+      text: "Strategy built for how buyers now discover brands through ChatGPT, Perplexity, Google AI Overviews, and comparison-driven search journeys.",
+    },
+  ];
+
+  const publicCaseStudies = [
+    {
+      label: "Public Case Study 01",
+      title: "From one-page pitch to crawlable GEO architecture",
+      challenge:
+        "The original site framed the offer, but it did not yet have the page depth or technical structure needed to compete for multiple commercial GEO terms.",
+      work:
+        "We added canonical alignment, sitemap coverage, structured metadata, internal links, and a set of dedicated service pages that make the offer easier to crawl and compare.",
+      outcome:
+        "The site now has a stronger technical foundation and a clearer path for indexing homepage, service, comparison, and industry-specific demand.",
+    },
+    {
+      label: "Public Case Study 02",
+      title: "Industry page expansion for higher-intent discovery",
+      challenge:
+        "A single homepage cannot carry intent for legal, med spa, private equity, industrial, and real estate discovery on its own.",
+      work:
+        "We built industry landing pages, connected them through the homepage, GEO service page, footer links, and the sitemap, and aligned the copy to each market's decision logic.",
+      outcome:
+        "The site can now compete on more specific commercial searches instead of relying on broad category language alone.",
+    },
+    {
+      label: "Public Case Study 03",
+      title: "Audit-led funnel with a live analyzer experience",
+      challenge:
+        "Most agency sites talk about insight but do not actually demonstrate the thinking behind their audits or recommendations in public.",
+      work:
+        "We turned the audit logic into a live analyzer on the homepage and connected it to service, GEO, and audit pages so the site demonstrates the method instead of just describing it.",
+      outcome:
+        "Visitors can now review the diagnostic framework directly, which creates a stronger evidence layer than generic promises or soft pitch copy.",
+    },
+  ];
+
+  const testimonialReadiness = [
+    {
+      title: "Named testimonials only",
+      text: "We only publish testimonials when the client approves attribution. That keeps the trust layer smaller, but much more defensible.",
+    },
+    {
+      title: "References shared directly",
+      text: "When a fit is serious, references can be shared privately instead of turning confidential client relationships into decorative homepage copy.",
+    },
+    {
+      title: "Public proof stays visible",
+      text: "Until approved testimonials are added, the site leans on public evidence: live tooling, crawlable service depth, clear methodology, and real implementation quality.",
+    },
+  ];
+
   const faqs = useMemo(
     () => [
       {
@@ -1217,6 +1280,29 @@ export default function AISyndicateWebsite() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+        <div className="max-w-3xl">
+          <p className="text-sm uppercase tracking-[0.3em] text-fuchsia-300">Founder Expertise</p>
+          <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+            Founder-led strategy, technical implementation, and answer-engine architecture.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-white/65">
+            This work is designed to close the gap between high-level positioning and the technical details that actually change how a site is crawled, compared, and trusted.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {founderExpertise.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8"
+            >
+              <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
+              <p className="mt-4 text-base leading-7 text-white/65">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="process" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.3em] text-fuchsia-300">How It Works</p>
@@ -1341,6 +1427,68 @@ export default function AISyndicateWebsite() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+        <div className="max-w-3xl">
+          <p className="text-sm uppercase tracking-[0.3em] text-fuchsia-300">Case Studies</p>
+          <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+            Public build case studies you can review directly on the live site.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-white/65">
+            Rather than inventing client metrics, we document the public work itself: what changed, why it changed, and how the site now supports stronger GEO and SEO depth.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {publicCaseStudies.map((study) => (
+            <div
+              key={study.title}
+              className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8"
+            >
+              <div className="text-xs uppercase tracking-[0.26em] text-cyan-200/70">{study.label}</div>
+              <h3 className="mt-4 text-2xl font-semibold text-white">{study.title}</h3>
+              <div className="mt-6 space-y-4 text-sm leading-7 text-white/65">
+                <div>
+                  <span className="text-white/90">Challenge</span>
+                  <p className="mt-1">{study.challenge}</p>
+                </div>
+                <div>
+                  <span className="text-white/90">Work</span>
+                  <p className="mt-1">{study.work}</p>
+                </div>
+                <div>
+                  <span className="text-white/90">Outcome</span>
+                  <p className="mt-1">{study.outcome}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-white/[0.03]">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+          <div className="max-w-3xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Testimonials & References</p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+              We only publish attributed testimonials, not anonymous praise.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-white/65">
+              That means this section stays disciplined. Approved quotes get published. Until then, we keep references private and let the live work carry more of the proof burden.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {testimonialReadiness.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[2rem] border border-white/10 bg-[#0b1124]/55 p-8"
+              >
+                <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
+                <p className="mt-4 text-base leading-7 text-white/65">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="faq" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">FAQ</p>
@@ -1409,6 +1557,12 @@ export default function AISyndicateWebsite() {
           <div className="grid gap-6 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-sm text-white/55">
             <div>
               AI Syndicate • <a className="text-white/75 hover:text-white" href="/generative-engine-optimization/">GEO Agency</a> • <a className="text-white/75 hover:text-white" href="/ai-visibility-audit/">AI Visibility Audit</a> • <a className="text-white/75 hover:text-white" href="/geo-vs-seo/">GEO vs SEO</a>
+            </div>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/62">
+              <span>United States</span>
+              <a className="text-white/78 hover:text-white" href="https://www.aisyndicate.com">www.aisyndicate.com</a>
+              <a className="text-white/78 hover:text-white" href="mailto:cj@aisyndicate.com">cj@aisyndicate.com</a>
+              <span>Founder-led SEO, GEO, and AI visibility strategy</span>
             </div>
             <div>
               <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">Industry Pages</p>
