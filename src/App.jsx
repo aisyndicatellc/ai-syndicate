@@ -640,8 +640,20 @@ export default function AISyndicateWebsite() {
 
       <div className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#050816]/70 backdrop-blur-2xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-          <a href="#top" className="text-sm font-semibold uppercase tracking-[0.28em] text-white/90">
-            AI Syndicate
+          <a href="#top" className="flex items-center gap-3 text-white/90 transition hover:text-white">
+            <img
+              src="/ai-syndicate-logo.png"
+              alt="AI Syndicate logo"
+              className="h-10 w-auto rounded-md bg-white/95 px-1.5 py-1 shadow-[0_8px_30px_rgba(0,0,0,0.22)]"
+            />
+            <div className="hidden sm:block">
+              <div className="text-[11px] font-medium uppercase tracking-[0.3em] text-cyan-200/70">
+                AI Search Visibility
+              </div>
+              <div className="mt-1 text-base font-semibold tracking-[0.06em] text-white">
+                AI Syndicate
+              </div>
+            </div>
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-white/70 md:flex">
@@ -660,14 +672,21 @@ export default function AISyndicateWebsite() {
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-8 lg:px-10 lg:pb-28 lg:pt-16">
           <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_.95fr]">
             <div>
-              <div className="mb-6 inline-flex items-center rounded-full border border-cyan-300/15 bg-white/[0.06] px-4 py-2 text-sm text-cyan-100/90 backdrop-blur">
-                SEO + GEO • AI SEARCH VISIBILITY • DISCOVERY • REVENUE
+              <div className="mb-8 inline-flex items-center rounded-full border border-cyan-300/15 bg-white/[0.06] px-4 py-2 text-sm text-cyan-100/90 backdrop-blur">
+                SEO + GEO • AI SEARCH VISIBILITY • PREMIUM POSITIONING
+              </div>
+              <div className="mb-8 max-w-md rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.22)] backdrop-blur-xl">
+                <img
+                  src="/ai-syndicate-logo.png"
+                  alt="AI Syndicate"
+                  className="h-auto w-full"
+                />
               </div>
               <h1 className="max-w-5xl text-5xl font-semibold tracking-[-0.04em] sm:text-6xl lg:text-7xl xl:text-[5.15rem] xl:leading-[0.98]">
-                The GEO agency for brands that want to win inside <span className="bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300 bg-clip-text text-transparent">AI answers</span> and search.
+                The GEO agency for brands that need to look like the <span className="bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300 bg-clip-text text-transparent">obvious answer</span>.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
-                AI Syndicate helps elite service businesses improve SEO, dominate answer-engine discovery, earn more AI citations, and turn that visibility into qualified pipeline and premium revenue.
+                AI Syndicate helps premium service brands improve SEO, dominate answer-engine discovery, and convert AI visibility into qualified pipeline, stronger authority, and higher-value revenue.
               </p>
               <div className="mt-6 flex flex-wrap gap-2 text-sm text-white/60">
                 {credibilityPoints.map((item) => (
