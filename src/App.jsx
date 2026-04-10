@@ -400,20 +400,40 @@ export default function AISyndicateWebsite() {
 
   const proofCards = [
     {
-      label: "Intent Coverage",
+      label: "Commercial Coverage",
       value: "Local → State → National",
-      text: "We build visibility across every layer of commercial search intent, not just generic traffic.",
+      text: "We build visibility across every layer of commercial search intent so your brand shows up when buyers are closest to action.",
     },
     {
-      label: "Positioning",
+      label: "Market Positioning",
       value: "Authority over noise",
-      text: "Your brand should feel like the premium choice before the prospect ever lands on a sales call.",
+      text: "Your brand should feel like the premium choice before the prospect ever lands on a sales call or asks AI who to trust.",
     },
     {
       label: "Commercial Outcome",
       value: "Visibility that converts",
-      text: "The objective is more trust, more qualified inquiries, and better clients—not vanity metrics.",
+      text: "The objective is more trust, more qualified inquiries, and better clients, not vanity metrics or empty traffic reports.",
     },
+  ];
+
+  const credibilityPoints = [
+    "Built for high-trust, high-ticket service businesses",
+    "Designed around search intent, buyer psychology, and AI citations",
+    "Combines SEO structure, GEO clarity, and conversion strategy",
+    "Focused on premium perception, not commodity traffic",
+  ];
+
+  const engagementFit = [
+    "You sell a high-trust service where authority changes close rates",
+    "Your buyers compare options and ask AI before they book calls",
+    "You need better leads, not just more impressions",
+    "Your current site does not clearly communicate why you are the premium choice",
+  ];
+
+  const founderPrinciples = [
+    "Clear positioning beats generic agency language",
+    "Proof beats promises every time",
+    "Search visibility should compound into revenue",
   ];
 
   const faqs = useMemo(
@@ -445,19 +465,19 @@ export default function AISyndicateWebsite() {
   const testimonials = [
     {
       quote:
-        "This feels less like a website and more like a category-defining product experience. It immediately signals premium authority.",
+        "This feels like a firm that understands both demand capture and perception. It immediately reads as premium, strategic, and expensive in the best way.",
       name: "Growth Advisor",
-      role: "B2B Services",
+      role: "High-Ticket B2B",
     },
     {
       quote:
-        "The analyzer makes the value obvious. You can feel how this would close sophisticated clients faster than a normal agency site.",
+        "The analyzer makes the value obvious. You can see how this would help a sophisticated operator understand where AI visibility is leaking revenue.",
       name: "Operator",
       role: "Investment Firm",
     },
     {
       quote:
-        "The positioning is sharp, the design feels elite, and the offer is clear. It looks like a million-dollar firm, not a freelancer site.",
+        "The positioning is sharp, the design feels elite, and the offer is clear. It looks like a specialist firm, not a generic marketing shop.",
       name: "Founder",
       role: "Consulting Brand",
     },
@@ -475,7 +495,7 @@ export default function AISyndicateWebsite() {
   ];
 
   const trustStats = [
-    { label: "Discovery Layers", value: "3" },
+    { label: "Discovery Layers", value: "3 layers" },
     { label: "Visibility Angles", value: "SEO / GEO / Conversion" },
     { label: "Core Focus", value: "Trust + Authority" },
   ];
@@ -719,6 +739,13 @@ export default function AISyndicateWebsite() {
               <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
                 AI Syndicate helps elite service businesses improve SEO, dominate answer-engine discovery, earn more AI citations, and turn that visibility into qualified pipeline and premium revenue.
               </p>
+              <div className="mt-6 flex flex-wrap gap-2 text-sm text-white/60">
+                {credibilityPoints.map((item) => (
+                  <span key={item} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2">
+                    {item}
+                  </span>
+                ))}
+              </div>
               <div className="mt-10 flex flex-wrap gap-4">
                 <GlowButton href="#contact">Book a Discovery Call</GlowButton>
                 <GlowButton href="#tool" variant="secondary">Run the Analyzer</GlowButton>
@@ -876,6 +903,33 @@ export default function AISyndicateWebsite() {
                   <div className="mt-3 text-xl font-semibold leading-7 text-white">{stat.value}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))]">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+          <div className="grid gap-8 lg:grid-cols-[1.05fr_.95fr]">
+            <div className="rounded-[2.2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
+              <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Why Clients Hire Us</p>
+              <h2 className="mt-4 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
+                Premium brands do not need more marketing noise. They need clearer authority.
+              </h2>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-white/65">
+                The market is already being shaped by what search engines rank and what AI systems summarize. We help brands close the gap between being excellent and being recognized as the obvious answer.
+              </p>
+            </div>
+
+            <div className="rounded-[2.2rem] border border-white/10 bg-[#0b1124]/80 p-8 shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
+              <div className="text-xs uppercase tracking-[0.28em] text-white/40">Best Fit</div>
+              <div className="mt-6 grid gap-4">
+                {engagementFit.map((item) => (
+                  <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-sm leading-7 text-white/75">
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -1200,6 +1254,38 @@ export default function AISyndicateWebsite() {
         </div>
       </section>
 
+      <section className="border-y border-white/10 bg-white/[0.03]">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+          <div className="grid gap-10 lg:grid-cols-[.95fr_1.05fr]">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Founder Standard</p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+                We build sites that look like the authority before the call ever happens.
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-white/65">
+                The standard is simple: if a sophisticated prospect lands on your site or asks AI about your category, your brand should sound focused, credible, and hard to ignore. That means clear positioning, explicit proof, and strong commercial language.
+              </p>
+            </div>
+            <div className="grid gap-4">
+              {founderPrinciples.map((item, index) => (
+                <div
+                  key={item}
+                  className={`rounded-[1.8rem] border border-white/10 p-6 ${
+                    index === 0
+                      ? "bg-gradient-to-br from-cyan-400/10 to-white/[0.03]"
+                      : index === 1
+                      ? "bg-gradient-to-br from-violet-500/10 to-white/[0.03]"
+                      : "bg-gradient-to-br from-fuchsia-500/10 to-white/[0.03]"
+                  }`}
+                >
+                  <div className="text-lg font-semibold text-white">{item}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="process" className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.3em] text-fuchsia-300">How It Works</p>
@@ -1277,7 +1363,7 @@ export default function AISyndicateWebsite() {
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Social Proof</p>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-              The positioning lands.
+              The positioning lands with sophisticated buyers.
             </h2>
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -1322,15 +1408,32 @@ export default function AISyndicateWebsite() {
           <div className="relative">
             <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Let’s Build Your AI Moat</p>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-              Ready to see where AI is sending attention in your market?
+              Ready to see why your competitors are being recommended first?
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/70">
               If your competitors are already being cited and you are not, demand is already being shaped without you. Start with the audit, see the gaps, and build the authority layer that wins better clients.
             </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <GlowButton href="mailto:hello@aisyndicate.com">hello@aisyndicate.com</GlowButton>
-              <GlowButton href="tel:+10000000000" variant="secondary">Schedule a Call</GlowButton>
+            <div className="mx-auto mt-8 max-w-3xl rounded-[1.8rem] border border-white/10 bg-[#0b1124]/55 p-6 text-left">
+              <div className="text-xs uppercase tracking-[0.28em] text-white/40">What Happens Next</div>
+              <div className="mt-4 grid gap-4 md:grid-cols-3">
+                {[
+                  "We review your market, offer, and current visibility",
+                  "We identify the authority and citation gaps holding you back",
+                  "We show you the fastest path to better SEO, GEO, and conversion performance",
+                ].map((item) => (
+                  <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-sm leading-7 text-white/75">
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <GlowButton href="mailto:cj@aisyndicate.com?subject=AI%20Syndicate%20Inquiry">Contact Us</GlowButton>
+              <GlowButton href="mailto:cj@aisyndicate.com?subject=AI%20Syndicate%20Discovery%20Call" variant="secondary">Email CJ Directly</GlowButton>
+            </div>
+            <p className="mt-5 text-sm text-white/45">
+              For founders, operators, and premium service brands that want better demand capture from search and AI answers.
+            </p>
           </div>
         </div>
       </section>
