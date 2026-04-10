@@ -305,7 +305,7 @@ function buildAnalyzerReport({ domain, companyName, industry, scope, content }) 
 }
 
 export default function AISyndicateWebsite() {
-  const siteUrl = "https://aisyndicate.com";
+  const siteUrl = "https://www.aisyndicate.com";
 
   const services = [
     {
@@ -313,24 +313,28 @@ export default function AISyndicateWebsite() {
       description:
         "We design your digital presence so AI platforms are more likely to cite, summarize, and recommend your company when buyers ask high-intent questions in ChatGPT, Perplexity, and Google AI search experiences.",
       bullets: ["Citation strategy", "Entity positioning", "AI answer visibility"],
+      href: "/generative-engine-optimization/",
     },
     {
       title: "AI Visibility Audits",
       description:
         "We show where competitors are being surfaced across AI answers and traditional search, where your authority breaks down, and where the fastest visibility gains exist.",
       bullets: ["Market mapping", "Competitor intelligence", "SERP + answer-engine gaps"],
+      href: "/ai-visibility-audit/",
     },
     {
-      title: "Authority Content Systems",
+      title: "GEO vs SEO Strategy",
       description:
-        "We create service pages, comparison pages, and proof assets built to earn trust from both humans and answer engines while strengthening classic SEO coverage.",
-      bullets: ["Service architecture", "Comparison pages", "Proof layers"],
+        "We help brands align classic SEO with answer-engine visibility so rankings, citations, authority, and conversion architecture reinforce each other instead of competing.",
+      bullets: ["Search + GEO alignment", "Commercial content systems", "Authority structure"],
+      href: "/geo-vs-seo/",
     },
     {
       title: "Conversion-Focused GEO",
       description:
         "We turn AI visibility into pipeline by structuring your site and offer so discovery becomes booked calls, qualified leads, and premium revenue.",
       bullets: ["Offer strategy", "Lead flow", "Higher-value inquiries"],
+      href: "#contact",
     },
   ];
 
@@ -451,25 +455,30 @@ export default function AISyndicateWebsite() {
     []
   );
 
-  const testimonials = [
+  const proofAssets = [
     {
-      quote:
-        "This feels like a firm that understands both demand capture and perception. It immediately reads as premium, strategic, and expensive in the best way.",
-      name: "Growth Advisor",
-      role: "High-Ticket B2B",
+      title: "Live AI visibility analyzer",
+      text: "Review a working analyzer on the site that scores copy for visibility, authority, and conversion readiness.",
     },
     {
-      quote:
-        "The analyzer makes the value obvious. You can see how this would help a sophisticated operator understand where AI visibility is leaking revenue.",
-      name: "Operator",
-      role: "Investment Firm",
+      title: "Dedicated commercial service pages",
+      text: "Review focused pages for generative engine optimization, AI visibility audits, and GEO vs SEO instead of relying on a single homepage.",
     },
     {
-      quote:
-        "The positioning is sharp, the design feels elite, and the offer is clear. It looks like a specialist firm, not a generic marketing shop.",
-      name: "Founder",
-      role: "Consulting Brand",
+      title: "Crawl-ready technical SEO foundation",
+      text: "Canonical tags, sitemap, robots directives, structured data, and internal links are live on the public site.",
     },
+    {
+      title: "Transparent methodology",
+      text: "You can review the exact framework we talk about publicly: topical coverage, entity clarity, proof signals, and commercial intent.",
+    },
+  ];
+
+  const proofPrinciples = [
+    "No inflated traffic screenshots or anonymous vanity metrics",
+    "No made-up client wins or invented enterprise logos",
+    "A public site architecture built to rank for commercial GEO terms",
+    "A live product-style experience that demonstrates the offer directly",
   ];
 
   const logos = ["ChatGPT", "Google AI", "Perplexity", "Claude", "Gemini", "Answer Engines"];
@@ -498,7 +507,7 @@ export default function AISyndicateWebsite() {
     "B2B Services",
   ];
 
-  const [toolDomain, setToolDomain] = useState("aisyndicate.com");
+  const [toolDomain, setToolDomain] = useState("www.aisyndicate.com");
   const [toolCompanyName, setToolCompanyName] = useState("AI Syndicate");
   const [toolIndustry, setToolIndustry] = useState("B2B Services");
   const [toolScope, setToolScope] = useState("Miami");
@@ -793,7 +802,7 @@ export default function AISyndicateWebsite() {
           <div className="relative grid gap-8 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/15 bg-white/[0.05] px-4 py-2 text-xs font-medium uppercase tracking-[0.28em] text-cyan-200/85">
-                Trusted By
+                Best Fit
               </div>
               <h2 className="mt-5 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.8rem] lg:leading-tight">
                 Built for brands where trust, perception, and premium positioning change the deal.
@@ -900,6 +909,13 @@ export default function AISyndicateWebsite() {
                   </span>
                 ))}
               </div>
+              <a
+                href={service.href}
+                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition hover:text-white"
+              >
+                Explore page
+                <span aria-hidden="true">→</span>
+              </a>
             </div>
           ))}
         </div>
@@ -1270,23 +1286,44 @@ export default function AISyndicateWebsite() {
       <section className="border-y border-white/10 bg-white/[0.03]">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
           <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Social Proof</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Proof</p>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-              The positioning lands with sophisticated buyers.
+              Proof you can actually review right now.
             </h2>
+            <p className="mt-5 text-lg leading-8 text-white/65">
+              We are not going to invent client logos, inflate screenshots, or publish fake revenue numbers. Instead, we show the live assets, technical foundation, and content architecture you can verify yourself.
+            </p>
           </div>
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {testimonials.map((item) => (
-              <div
-                key={item.name}
-                className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.05] p-8 shadow-lg shadow-black/20"
-              >
-                <div className="absolute right-5 top-5 text-5xl text-white/10">”</div>
-                <div className="text-lg leading-8 text-white/78">“{item.quote}”</div>
-                <div className="mt-8 text-sm font-semibold text-white">{item.name}</div>
-                <div className="mt-1 text-sm text-white/45">{item.role}</div>
+          <div className="mt-12 grid gap-6 lg:grid-cols-[1.05fr_.95fr]">
+            <div className="grid gap-6 md:grid-cols-2">
+              {proofAssets.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8"
+                >
+                  <div className="text-xs uppercase tracking-[0.26em] text-cyan-200/70">What you can review</div>
+                  <h3 className="mt-4 text-2xl font-semibold text-white">{item.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-white/65">{item.text}</p>
+                </div>
+              ))}
+            </div>
+            <div className="rounded-[2rem] border border-white/10 bg-[#0b1124]/55 p-8">
+              <div className="text-xs uppercase tracking-[0.28em] text-white/40">Trust Standard</div>
+              <h3 className="mt-4 text-3xl font-semibold text-white">
+                A stronger signal than soft testimonials is a site that can defend its claims.
+              </h3>
+              <div className="mt-6 space-y-4">
+                {proofPrinciples.map((item) => (
+                  <div key={item} className="border-l border-cyan-300/20 pl-4 text-sm leading-7 text-white/72">
+                    {item}
+                  </div>
+                ))}
               </div>
-            ))}
+              <div className="mt-8 flex flex-wrap gap-4">
+                <GlowButton href="/generative-engine-optimization/">Review GEO Page</GlowButton>
+                <GlowButton href="#tool" variant="secondary">Try the Analyzer</GlowButton>
+              </div>
+            </div>
           </div>
         </div>
       </section>

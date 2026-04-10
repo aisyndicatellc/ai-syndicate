@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aisyndicate.com/sitemap.xml
+Sitemap: https://www.aisyndicate.com/sitemap.xml
