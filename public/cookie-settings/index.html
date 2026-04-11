@@ -76,7 +76,7 @@
 }
     </script>
   </head>
-  <body>
+  <body class="page-premium page-legal">
     <header class="topbar">
       <div class="shell topbar-inner">
         <a class="brand" href="/">
@@ -122,7 +122,32 @@
         </aside>
       </div>
 
-      <section class="section">
+      <section class="policy-nav">
+        <div class="policy-links">
+          <a class="policy-tab" href="/privacy-policy/">Privacy Policy</a>
+          <a class="policy-tab" href="/terms-of-service/">Terms of Service</a>
+          <a class="policy-tab current" href="/cookie-settings/">Cookie Settings</a>
+        </div>
+        <div class="policy-grid">
+          <article class="policy-card">
+            <div class="mini-label">Policy Focus</div>
+            <h3>Tracking posture</h3>
+            <p>This page explains the site’s current browser-storage and tracking position without pretending a full consent center exists when non-essential tools are not deployed.</p>
+          </article>
+          <article class="policy-card">
+            <div class="mini-label">Current State</div>
+            <h3>Technical delivery only</h3>
+            <p>The public site is currently oriented around delivery, security, and infrastructure rather than advertising pixels, remarketing, or embedded analytics scripts.</p>
+          </article>
+          <article class="policy-card">
+            <div class="mini-label">Future State</div>
+            <h3>Update before expansion</h3>
+            <p>If tracking changes, this page, the privacy policy, and any consent controls should be updated together before or at deployment.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="current-position">
         <div class="section-header">
           <div class="eyebrow">Current Cookie and Storage Position</div>
           <h2>What the public site is currently designed to do.</h2>
@@ -147,7 +172,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="visitor-controls">
         <div class="section-header">
           <div class="eyebrow">Your Controls</div>
           <h2>How visitors can control cookies and browser storage now.</h2>
@@ -164,7 +189,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="future-changes">
         <div class="section-header">
           <div class="eyebrow">If The Site Changes</div>
           <h2>What AI Syndicate should do before adding non-essential tracking.</h2>
