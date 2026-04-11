@@ -61,7 +61,7 @@ async function getPages() {
     ...(await walkIndexFiles(publicDir)),
   ];
 
-  const pages = [];
+  const pages = new Map();
 
   for (const filePath of pageFiles) {
     const html = await fs.readFile(filePath, "utf8");
@@ -70,19 +70,20 @@ async function getPages() {
     if (!canonical) continue;
 
     const stats = await fs.stat(filePath);
-    pages.push({
-      url: normalizeCanonical(canonical),
-      lastmod: formatDate(stats.mtime),
-    });
+    const url = normalizeCanonical(canonical);
+    const lastmod = formatDate(stats.mtime);
+    const existing = pages.get(url);
+
+    if (!existing || lastmod > existing.lastmod) {
+      pages.set(url, { url, lastmod });
+    }
   }
 
-  pages.sort((a, b) => {
+  return Array.from(pages.values()).sort((a, b) => {
     if (a.url === `${siteUrl}/`) return -1;
     if (b.url === `${siteUrl}/`) return 1;
     return a.url.localeCompare(b.url);
   });
-
-  return pages;
 }
 
 function buildSitemap(pages) {

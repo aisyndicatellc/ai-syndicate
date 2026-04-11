@@ -1,3 +1,55 @@
 {
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/geo-for-law-firms",
+      "destination": "/seo-for-law-firms/",
+      "permanent": true
+    },
+    {
+      "source": "/geo-for-law-firms/",
+      "destination": "/seo-for-law-firms/",
+      "permanent": true
+    },
+    {
+      "source": "/geo-for-real-estate",
+      "destination": "/seo-for-real-estate/",
+      "permanent": true
+    },
+    {
+      "source": "/geo-for-real-estate/",
+      "destination": "/seo-for-real-estate/",
+      "permanent": true
+    },
+    {
+      "source": "/geo-for-med-spas",
+      "destination": "/seo-for-med-spas/",
+      "permanent": true
+    },
+    {
+      "source": "/geo-for-med-spas/",
+      "destination": "/seo-for-med-spas/",
+      "permanent": true
+    },
+    {
+      "source": "/geo-for-private-equity",
+      "destination": "/seo-for-private-equity/",
+      "permanent": true
+    },
+    {
+      "source": "/geo-for-private-equity/",
+      "destination": "/seo-for-private-equity/",
+      "permanent": true
+    },
+    {
+      "source": "/geo-for-oil-and-gas-services",
+      "destination": "/seo-for-oil-gas-services/",
+      "permanent": true
+    },
+    {
+      "source": "/geo-for-oil-and-gas-services/",
+      "destination": "/seo-for-oil-gas-services/",
+      "permanent": true
+    }
+  ]
 }

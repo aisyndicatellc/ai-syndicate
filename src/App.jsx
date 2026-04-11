@@ -345,11 +345,11 @@ export default function AISyndicateWebsite() {
   ];
 
   const industries = [
-    { title: "Law Firms", href: "/geo-for-law-firms/" },
-    { title: "Private Equity", href: "/geo-for-private-equity/" },
-    { title: "Med Spas", href: "/geo-for-med-spas/" },
-    { title: "Oil & Gas Services", href: "/geo-for-oil-and-gas-services/" },
-    { title: "Real Estate", href: "/geo-for-real-estate/" },
+    { title: "Law Firms", href: "/seo-for-law-firms/" },
+    { title: "Real Estate", href: "/seo-for-real-estate/" },
+    { title: "Med Spas", href: "/seo-for-med-spas/" },
+    { title: "Private Equity", href: "/seo-for-private-equity/" },
+    { title: "Oil & Gas Services", href: "/seo-for-oil-gas-services/" },
   ];
 
   const process = [
@@ -395,12 +395,13 @@ export default function AISyndicateWebsite() {
   ];
 
   const queryThemes = [
-    "best GEO agency for law firms",
+    "seo for law firms",
+    "seo for real estate",
+    "seo for med spas",
     "generative engine optimization agency",
-    "how to rank in ChatGPT and AI Overviews",
-    "AI search optimization for service businesses",
+    "how to rank in ChatGPT",
+    "how to show up in Google AI Overviews",
     "GEO vs SEO for high-ticket brands",
-    "how to get cited by Perplexity and ChatGPT",
   ];
 
   const proofCards = [
@@ -466,7 +467,7 @@ export default function AISyndicateWebsite() {
       challenge:
         "A single homepage cannot carry intent for legal, med spa, private equity, industrial, and real estate discovery on its own.",
       work:
-        "We built industry landing pages, connected them through the homepage, GEO service page, footer links, and the sitemap, and aligned the copy to each market's decision logic.",
+        "We built dedicated industry pages, an industries hub, stronger footer navigation, and cleaner internal links so each vertical has a distinct role in the site architecture.",
       outcome:
         "The site can now compete on more specific commercial searches instead of relying on broad category language alone.",
     },
@@ -731,9 +732,9 @@ export default function AISyndicateWebsite() {
 
           <div className="hidden items-center gap-6 text-sm text-white/70 md:flex">
             <a href="#services" className="transition hover:text-white">Services</a>
-            <a href="#industries" className="transition hover:text-white">Industries</a>
-            <a href="#tool" className="transition hover:text-white">Website Analyzer</a>
-            <a href="#faq" className="transition hover:text-white">FAQ</a>
+            <a href="/industries/" className="transition hover:text-white">Industries</a>
+            <a href="/case-studies/" className="transition hover:text-white">Case Studies</a>
+            <a href="/about/" className="transition hover:text-white">About</a>
           </div>
 
           <GlowButton href="/ai-visibility-audit/">Start with the Audit</GlowButton>
@@ -830,13 +831,13 @@ export default function AISyndicateWebsite() {
                     ))}
                   </div>
 
-                  <div className="grid gap-4 md:grid-cols-3">
+                  <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                     {[
                       "Service pages make your offer easier to summarize",
                       "Comparison pages capture high-intent demand",
                       "Proof systems reinforce authority and conversion",
                     ].map((item) => (
-                      <div key={item} className="rounded-2xl border border-white/10 bg-[#0b1124]/60 p-4 text-sm leading-7 text-white/70">
+                      <div key={item} className="rounded-2xl border border-white/10 bg-[#0b1124]/60 p-4 text-sm leading-7 text-white/70 sm:min-h-full">
                         {item}
                       </div>
                     ))}
@@ -1381,6 +1382,11 @@ export default function AISyndicateWebsite() {
             </a>
           ))}
         </div>
+        <div className="mt-8">
+          <GlowButton href="/industries/" variant="secondary">
+            View the Industries Hub
+          </GlowButton>
+        </div>
       </section>
 
       <section className="border-y border-white/10 bg-white/[0.03]">
@@ -1420,8 +1426,8 @@ export default function AISyndicateWebsite() {
                 ))}
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
-                <GlowButton href="/generative-engine-optimization/">Review GEO Page</GlowButton>
-                <GlowButton href="#tool" variant="secondary">Try the Analyzer</GlowButton>
+                <GlowButton href="/case-studies/">View Case Studies</GlowButton>
+                <GlowButton href="/methodology/" variant="secondary">Review Methodology</GlowButton>
               </div>
             </div>
           </div>
@@ -1462,6 +1468,10 @@ export default function AISyndicateWebsite() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <GlowButton href="/case-studies/">Open the Case Studies Hub</GlowButton>
+          <GlowButton href="/methodology/" variant="secondary">See the Methodology</GlowButton>
         </div>
       </section>
 
@@ -1555,7 +1565,7 @@ export default function AISyndicateWebsite() {
         </section>
 
         <footer className="mx-auto max-w-7xl px-6 pb-16 lg:px-10">
-          <div className="grid gap-8 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-sm text-white/55 lg:grid-cols-[1.1fr_.75fr_1fr] lg:p-10">
+          <div className="grid gap-8 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-sm text-white/55 lg:grid-cols-[1.1fr_.7fr_.9fr_1fr] lg:p-10">
             <div>
               <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">AI Syndicate</p>
               <h3 className="mt-4 max-w-xl text-2xl font-semibold tracking-tight text-white sm:text-3xl">
@@ -1577,7 +1587,17 @@ export default function AISyndicateWebsite() {
                 <a className="transition hover:text-white" href="/generative-engine-optimization/">GEO Agency</a>
                 <a className="transition hover:text-white" href="/ai-visibility-audit/">AI Visibility Audit</a>
                 <a className="transition hover:text-white" href="/geo-vs-seo/">GEO vs SEO</a>
-                <a className="transition hover:text-white" href="#tool">Website Analyzer</a>
+                <a className="transition hover:text-white" href="/industries/">Industries</a>
+              </div>
+            </div>
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.24em] text-white/40">Trust & Resources</p>
+              <div className="mt-4 grid gap-3 text-sm text-white/68">
+                <a className="transition hover:text-white" href="/about/">About</a>
+                <a className="transition hover:text-white" href="/case-studies/">Case Studies</a>
+                <a className="transition hover:text-white" href="/methodology/">Methodology</a>
+                <a className="transition hover:text-white" href="/how-to-rank-in-chatgpt/">How to Rank in ChatGPT</a>
+                <a className="transition hover:text-white" href="/how-to-show-up-in-google-ai-overviews/">How to Show Up in Google AI Overviews</a>
               </div>
             </div>
             <div>
