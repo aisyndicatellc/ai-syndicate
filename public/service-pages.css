@@ -613,3 +613,12 @@ img {
     padding: 28px;
   }
 }
+
+@media (max-width: 768px) {
+  .section,
+  .cta,
+  .footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 840px;
+  }
+}
