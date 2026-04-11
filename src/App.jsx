@@ -731,9 +731,9 @@ export default function AISyndicateWebsite() {
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-white/70 md:flex">
-            <a href="#services" className="transition hover:text-white">Services</a>
+            <a href="/generative-engine-optimization/" className="transition hover:text-white">GEO Agency</a>
+            <a href="/ai-visibility-audit/" className="transition hover:text-white">AI Visibility Audit</a>
             <a href="/industries/" className="transition hover:text-white">Industries</a>
-            <a href="/case-studies/" className="transition hover:text-white">Case Studies</a>
             <a href="/about/" className="transition hover:text-white">About</a>
           </div>
 
@@ -1337,8 +1337,8 @@ export default function AISyndicateWebsite() {
               We show where AI platforms are sending attention, who they are recommending instead of you, and exactly what your brand needs to become the premium answer.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <GlowButton href="#contact">Get the Audit</GlowButton>
-              <GlowButton href="#tool" variant="secondary">Try the Tool</GlowButton>
+              <GlowButton href="#contact">Start with the Audit</GlowButton>
+              <GlowButton href="#tool" variant="secondary">Run the Analyzer</GlowButton>
             </div>
           </div>
           <div className="rounded-[2rem] border border-white/10 bg-[#0b1124]/80 p-8 shadow-2xl shadow-black/20">

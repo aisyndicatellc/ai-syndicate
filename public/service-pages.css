@@ -199,6 +199,8 @@ img {
   line-height: 0.99;
   letter-spacing: -0.05em;
   font-weight: 650;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 .page-title .gradient {
@@ -271,6 +273,8 @@ img {
   margin: 14px 0 0;
   font-size: 29px;
   line-height: 1.18;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 .insight-copy {
@@ -301,6 +305,21 @@ img {
   margin: 10px 0 0;
   color: var(--muted);
   line-height: 1.8;
+}
+
+.panel,
+.score-box strong,
+.score-box p,
+.content-card h3,
+.content-card p,
+.content-card li,
+.cta h2,
+.cta p,
+.chip,
+.footer-links-column a,
+.footer-copy,
+.footer-meta {
+  overflow-wrap: anywhere;
 }
 
 .mini-label {
