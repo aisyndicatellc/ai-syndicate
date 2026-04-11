@@ -124,8 +124,10 @@ img {
 }
 
 .brand-kicker {
+  font-family: var(--font-display);
   font-size: 10px;
-  letter-spacing: 0.32em;
+  font-weight: 500;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(103, 232, 249, 0.75);
 }
@@ -141,6 +143,7 @@ img {
   display: flex;
   align-items: center;
   gap: 18px;
+  font-family: var(--font-display);
   color: var(--subtle);
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -187,6 +190,7 @@ img {
   padding: 13px 20px;
   border-radius: 999px;
   border: 1px solid var(--line);
+  font-family: var(--font-display);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -269,6 +273,18 @@ img {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 30px;
+}
+
+.hero-actions-note {
+  margin: 14px 0 0;
+  color: var(--subtle);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.hero-actions-note a {
+  color: var(--text);
+  border-bottom: 1px solid rgba(103, 232, 249, 0.28);
 }
 
 .hero-points {
@@ -507,6 +523,74 @@ img {
 .content-card ul {
   margin: 18px 0 0;
   padding-left: 18px;
+}
+
+.vertical-map,
+.hub-route-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.vertical-map {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.vertical-card,
+.hub-route-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top right, rgba(103, 232, 249, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.024));
+  padding: 28px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(16px);
+}
+
+.vertical-card::before,
+.hub-route-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(103, 232, 249, 0.32), rgba(255, 255, 255, 0));
+}
+
+.vertical-card h3,
+.hub-route-card h3 {
+  margin: 12px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.2vw, 36px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.vertical-card p,
+.hub-route-card p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  line-height: 1.82;
+}
+
+.vertical-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.hub-route-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.hub-route-card .inline-list {
+  margin-top: 20px;
 }
 
 .inline-list {
@@ -1129,7 +1213,8 @@ img {
   .columns-2,
   .columns-3,
   .card-grid,
-  .footer-grid {
+  .footer-grid,
+  .hub-route-grid {
     grid-template-columns: 1fr;
   }
 
