@@ -1573,9 +1573,10 @@ export default function AISyndicateWebsite() {
                 Premium SEO, GEO, and AI visibility strategy for brands that need to look like the obvious choice.
               </h3>
               <p className="mt-4 max-w-lg text-base leading-7 text-white/62">
-                Founder-led strategy for premium service brands that need stronger discoverability, sharper positioning, and better demand capture from search and AI answers.
+                Founder-led strategy for premium service brands that need stronger discoverability, sharper positioning, and better demand capture from search and AI answers. AI Syndicate is operated by AI Syndicate Collective LLC.
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-white/62">
+                <span>AI Syndicate Collective LLC</span>
                 <span>United States</span>
                 <a className="text-white/78 hover:text-white" href="https://www.aisyndicate.com">www.aisyndicate.com</a>
                 <a className="text-white/78 hover:text-white" href="mailto:cj@aisyndicate.com">cj@aisyndicate.com</a>
