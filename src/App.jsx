@@ -1616,6 +1616,11 @@ export default function AISyndicateWebsite() {
               </div>
             </div>
           </div>
+          <div className="mt-5 flex flex-wrap justify-center gap-x-10 gap-y-4 border-t border-cyan-300/15 px-2 pt-6 text-[15px] text-white/90">
+            <a className="transition hover:text-cyan-300" href="/privacy-policy/">Privacy Policy</a>
+            <a className="transition hover:text-cyan-300" href="/terms-of-service/">Terms of Service</a>
+            <a className="transition hover:text-cyan-300" href="/cookie-settings/">Cookie Settings</a>
+          </div>
         </footer>
       </main>
     </div>
