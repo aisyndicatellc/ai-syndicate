@@ -53,6 +53,8 @@ const STOPWORDS = new Set([
   "service",
 ]);
 
+const DEFAULT_COMPANY_NAME = "AI Syndicate";
+
 function clamp(num, min, max) {
   return Math.max(min, Math.min(max, num));
 }
@@ -578,7 +580,7 @@ export default function AISyndicateWebsite() {
   ];
 
   const [toolDomain, setToolDomain] = useState("www.aisyndicate.com");
-  const [toolCompanyName, setToolCompanyName] = useState("AI Syndicate");
+  const [toolCompanyName, setToolCompanyName] = useState(DEFAULT_COMPANY_NAME);
   const [toolIndustry, setToolIndustry] = useState("B2B Services");
   const [toolScope, setToolScope] = useState("Miami");
   const [toolContent, setToolContent] = useState(
@@ -649,8 +651,15 @@ export default function AISyndicateWebsite() {
       }
 
       setToolContent(data.content || "");
-      if (data.title && !toolCompanyName.trim()) {
-        setToolCompanyName(data.title);
+      if (data.hostname) {
+        setToolDomain(data.hostname);
+      }
+
+      if (
+        data.siteName &&
+        (!toolCompanyName.trim() || toolCompanyName.trim() === DEFAULT_COMPANY_NAME)
+      ) {
+        setToolCompanyName(data.siteName);
       }
     } catch (error) {
       setFetchError(error.message || "Failed to analyze website");
@@ -721,16 +730,16 @@ export default function AISyndicateWebsite() {
               />
             </div>
             <div className="hidden sm:block">
-              <div className="text-[11px] font-medium uppercase tracking-[0.3em] text-cyan-200/70">
+              <div className="site-brand-kicker text-cyan-200/70">
                 AI Search Visibility
               </div>
-              <div className="mt-1 text-base font-semibold tracking-[0.06em] text-white">
+              <div className="site-brand-name mt-1 text-white">
                 AI Syndicate
               </div>
             </div>
           </a>
 
-          <div className="hidden items-center gap-6 text-sm text-white/70 md:flex">
+          <div className="site-nav hidden items-center gap-6 text-white/70 md:flex">
             <a href="/generative-engine-optimization/" className="transition hover:text-white">GEO Agency</a>
             <a href="/ai-visibility-audit/" className="transition hover:text-white">AI Visibility Audit</a>
             <a href="/industries/" className="transition hover:text-white">Industries</a>
@@ -760,15 +769,15 @@ export default function AISyndicateWebsite() {
                   />
                 </div>
                 <div className="text-left">
-                  <div className="text-xs uppercase tracking-[0.34em] text-cyan-200/70">
+                  <div className="site-brand-kicker text-cyan-200/70">
                     AI Search Visibility
                   </div>
-                  <div className="mt-2 text-3xl font-semibold tracking-[0.08em] text-white sm:text-4xl">
+                  <div className="site-font-display mt-2 text-3xl font-semibold tracking-[0.08em] text-white sm:text-4xl">
                     AI SYNDICATE
                   </div>
                 </div>
               </div>
-              <h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.05em] sm:text-6xl lg:text-7xl xl:leading-[0.98]">
+              <h1 className="site-font-display max-w-4xl text-5xl font-semibold tracking-[-0.05em] sm:text-6xl lg:text-7xl xl:leading-[0.98]">
                 The GEO agency for brands that need to look like the <span className="bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300 bg-clip-text text-transparent">obvious answer</span>.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70 sm:text-[1.15rem]">
