@@ -1577,9 +1577,9 @@ export default function AISyndicateWebsite() {
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-white/62">
                 <span>AI Syndicate Collective LLC</span>
-                <span>United States</span>
+                <span>7901 4TH ST N, STE 300</span>
+                <span>ST. PETERSBURG, FL 33702</span>
                 <a className="text-white/78 hover:text-white" href="https://www.aisyndicate.com">www.aisyndicate.com</a>
-                <a className="text-white/78 hover:text-white" href="mailto:cj@aisyndicate.com">cj@aisyndicate.com</a>
               </div>
             </div>
             <div>
