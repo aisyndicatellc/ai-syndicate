@@ -105,9 +105,9 @@ img {
 .nav {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 18px;
   color: var(--subtle);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -115,6 +115,7 @@ img {
 .nav a {
   position: relative;
   padding: 6px 0;
+  white-space: nowrap;
   transition: color 180ms ease;
 }
 
@@ -137,6 +138,10 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.topbar-actions .button {
+  white-space: nowrap;
 }
 
 .button {

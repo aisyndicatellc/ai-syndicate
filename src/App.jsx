@@ -345,11 +345,11 @@ export default function AISyndicateWebsite() {
   ];
 
   const industries = [
-    { title: "Law Firms", href: "/seo-for-law-firms/" },
-    { title: "Real Estate", href: "/seo-for-real-estate/" },
-    { title: "Med Spas", href: "/seo-for-med-spas/" },
-    { title: "Private Equity", href: "/seo-for-private-equity/" },
-    { title: "Oil & Gas Services", href: "/seo-for-oil-gas-services/" },
+    { title: "Law Firms", href: "/geo-for-law-firms/" },
+    { title: "Real Estate", href: "/geo-for-real-estate/" },
+    { title: "Med Spas", href: "/geo-for-med-spas/" },
+    { title: "Private Equity", href: "/geo-for-private-equity/" },
+    { title: "Oil & Gas Services", href: "/geo-for-oil-gas-services/" },
   ];
 
   const process = [
@@ -734,10 +734,11 @@ export default function AISyndicateWebsite() {
             <a href="/generative-engine-optimization/" className="transition hover:text-white">GEO Agency</a>
             <a href="/ai-visibility-audit/" className="transition hover:text-white">AI Visibility Audit</a>
             <a href="/industries/" className="transition hover:text-white">Industries</a>
+            <a href="/#tool" className="transition hover:text-white">Run Analyzer</a>
             <a href="/about/" className="transition hover:text-white">About</a>
           </div>
 
-          <GlowButton href="/ai-visibility-audit/">Start with the Audit</GlowButton>
+          <GlowButton href="mailto:cj@aisyndicate.com?subject=AI%20Syndicate%20Inquiry">Contact Us</GlowButton>
         </div>
       </div>
 
@@ -1337,7 +1338,7 @@ export default function AISyndicateWebsite() {
               We show where AI platforms are sending attention, who they are recommending instead of you, and exactly what your brand needs to become the premium answer.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <GlowButton href="#contact">Start with the Audit</GlowButton>
+              <GlowButton href="/ai-visibility-audit/">Start with the Audit</GlowButton>
               <GlowButton href="#tool" variant="secondary">Run the Analyzer</GlowButton>
             </div>
           </div>
@@ -1553,7 +1554,7 @@ export default function AISyndicateWebsite() {
                   Contact Us
                 </GlowButton>
                 <GlowButton href="#tool" variant="secondary">
-                  Run the Analyzer First
+                  Run the Analyzer
                 </GlowButton>
               </div>
               <p className="mt-4 text-sm text-white/55">Prefer email? Reach us at cj@aisyndicate.com.</p>
